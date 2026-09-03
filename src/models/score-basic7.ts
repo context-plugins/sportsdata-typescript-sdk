@@ -1,0 +1,128 @@
+import * as s from "../core/validation/index.js";
+import type { Schema } from "../core/validation/schema.js";
+import { playoffAggregateScore2Schema, type PlayoffAggregateScore2 } from "./playoff-aggregate-score2.js";
+
+export type ScoreBasic7 = {
+  period?: string | null;
+  clock?: number | null;
+  gameId?: number;
+  roundId?: number;
+  season?: number;
+  seasonType?: number;
+  group?: string | null;
+  awayTeamId?: number | null;
+  homeTeamId?: number | null;
+  venueId?: number | null;
+  day?: string | null;
+  dateTime?: string | null;
+  status?: string | null;
+  week?: number | null;
+  winner?: string | null;
+  venueType?: string | null;
+  awayTeamKey?: string | null;
+  awayTeamName?: string | null;
+  awayTeamCountryCode?: string | null;
+  awayTeamScore?: number | null;
+  awayTeamScorePeriod1?: number | null;
+  awayTeamScorePeriod2?: number | null;
+  awayTeamScoreExtraTime?: number | null;
+  awayTeamScorePenalty?: number | null;
+  homeTeamKey?: string | null;
+  homeTeamName?: string | null;
+  homeTeamCountryCode?: string | null;
+  homeTeamScore?: number | null;
+  homeTeamScorePeriod1?: number | null;
+  homeTeamScorePeriod2?: number | null;
+  homeTeamScoreExtraTime?: number | null;
+  homeTeamScorePenalty?: number | null;
+  updated?: string | null;
+  updatedUtc?: string | null;
+  globalGameId?: number;
+  globalAwayTeamId?: number | null;
+  globalHomeTeamId?: number | null;
+  isClosed?: boolean | null;
+  playoffAggregateScore?: PlayoffAggregateScore2;
+};
+
+export const scoreBasic7Schema: Schema<ScoreBasic7> = s.object<ScoreBasic7>({
+  period: s.optionalNullable(s.string()),
+  clock: s.optionalNullable(s.number()),
+  gameId: s.optional(s.number()),
+  roundId: s.optional(s.number()),
+  season: s.optional(s.number()),
+  seasonType: s.optional(s.number()),
+  group: s.optionalNullable(s.string()),
+  awayTeamId: s.optionalNullable(s.number()),
+  homeTeamId: s.optionalNullable(s.number()),
+  venueId: s.optionalNullable(s.number()),
+  day: s.optionalNullable(s.string()),
+  dateTime: s.optionalNullable(s.string()),
+  status: s.optionalNullable(s.string()),
+  week: s.optionalNullable(s.number()),
+  winner: s.optionalNullable(s.string()),
+  venueType: s.optionalNullable(s.string()),
+  awayTeamKey: s.optionalNullable(s.string()),
+  awayTeamName: s.optionalNullable(s.string()),
+  awayTeamCountryCode: s.optionalNullable(s.string()),
+  awayTeamScore: s.optionalNullable(s.number()),
+  awayTeamScorePeriod1: s.optionalNullable(s.number()),
+  awayTeamScorePeriod2: s.optionalNullable(s.number()),
+  awayTeamScoreExtraTime: s.optionalNullable(s.number()),
+  awayTeamScorePenalty: s.optionalNullable(s.number()),
+  homeTeamKey: s.optionalNullable(s.string()),
+  homeTeamName: s.optionalNullable(s.string()),
+  homeTeamCountryCode: s.optionalNullable(s.string()),
+  homeTeamScore: s.optionalNullable(s.number()),
+  homeTeamScorePeriod1: s.optionalNullable(s.number()),
+  homeTeamScorePeriod2: s.optionalNullable(s.number()),
+  homeTeamScoreExtraTime: s.optionalNullable(s.number()),
+  homeTeamScorePenalty: s.optionalNullable(s.number()),
+  updated: s.optionalNullable(s.string()),
+  updatedUtc: s.optionalNullable(s.string()),
+  globalGameId: s.optional(s.number()),
+  globalAwayTeamId: s.optionalNullable(s.number()),
+  globalHomeTeamId: s.optionalNullable(s.number()),
+  isClosed: s.optionalNullable(s.boolean()),
+  playoffAggregateScore: s.optional(s.lazy(() => playoffAggregateScore2Schema)),
+  _keysMap: {
+    period: "Period",
+    clock: "Clock",
+    gameId: "GameId",
+    roundId: "RoundId",
+    season: "Season",
+    seasonType: "SeasonType",
+    group: "Group",
+    awayTeamId: "AwayTeamId",
+    homeTeamId: "HomeTeamId",
+    venueId: "VenueId",
+    day: "Day",
+    dateTime: "DateTime",
+    status: "Status",
+    week: "Week",
+    winner: "Winner",
+    venueType: "VenueType",
+    awayTeamKey: "AwayTeamKey",
+    awayTeamName: "AwayTeamName",
+    awayTeamCountryCode: "AwayTeamCountryCode",
+    awayTeamScore: "AwayTeamScore",
+    awayTeamScorePeriod1: "AwayTeamScorePeriod1",
+    awayTeamScorePeriod2: "AwayTeamScorePeriod2",
+    awayTeamScoreExtraTime: "AwayTeamScoreExtraTime",
+    awayTeamScorePenalty: "AwayTeamScorePenalty",
+    homeTeamKey: "HomeTeamKey",
+    homeTeamName: "HomeTeamName",
+    homeTeamCountryCode: "HomeTeamCountryCode",
+    homeTeamScore: "HomeTeamScore",
+    homeTeamScorePeriod1: "HomeTeamScorePeriod1",
+    homeTeamScorePeriod2: "HomeTeamScorePeriod2",
+    homeTeamScoreExtraTime: "HomeTeamScoreExtraTime",
+    homeTeamScorePenalty: "HomeTeamScorePenalty",
+    updated: "Updated",
+    updatedUtc: "UpdatedUtc",
+    globalGameId: "GlobalGameId",
+    globalAwayTeamId: "GlobalAwayTeamId",
+    globalHomeTeamId: "GlobalHomeTeamId",
+    isClosed: "IsClosed",
+    playoffAggregateScore: "PlayoffAggregateScore",
+  },
+});
