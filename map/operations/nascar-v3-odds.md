@@ -4,7 +4,7 @@
 
 Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 10 operations · Request and error types: namespace `NascarV3Odds`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nascarV3OddsBettingEventsByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV3Odds.NascarV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsBettingEventsByDateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV3Odds.NascarV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsBettingEventsBySeasonRequest` (2):
@@ -59,7 +59,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket3`
-- **Error**: `NascarV3Odds.NascarV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsBettingMarketRequest` (2):
@@ -82,7 +82,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV3Odds.NascarV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsBettingMarketsByEventRequest` (3):
@@ -107,7 +107,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV3Odds.NascarV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsBettingMarketsByMarketTypeRequest` (4):
@@ -133,7 +133,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV3Odds.NascarV3OddsBettingMarketsByRaceError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsBettingMarketsByRaceError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsBettingMarketsByRaceRequest` (3):
@@ -158,7 +158,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection3`
-- **Error**: `NascarV3Odds.NascarV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsBettingMetadataRequest` (1):
@@ -180,7 +180,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `RaceOdds`
-- **Error**: `NascarV3Odds.NascarV3OddsRaceOddsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsRaceOddsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsRaceOddsRequest` (2):
@@ -203,7 +203,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `RaceOdds`
-- **Error**: `NascarV3Odds.NascarV3OddsRaceOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsRaceOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsRaceOddsLineMovementRequest` (2):
@@ -226,7 +226,7 @@ Accessor: `client.nascarV3Odds` · Source: `src/resources/nascar-v3-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV3Odds.NascarV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV3Odds.NascarV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV3Odds.NascarV3OddsSportsbooksByActiveRequest` (1):

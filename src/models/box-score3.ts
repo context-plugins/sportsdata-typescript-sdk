@@ -7,10 +7,15 @@ import { scoringPlay3Schema, type ScoringPlay3 } from "./scoring-play3.js";
 import { teamGame4Schema, type TeamGame4 } from "./team-game4.js";
 
 export type BoxScore3 = {
+  /** The game details of this box score */
   game?: Game33;
+  /** The details of the periods (quarters & overtime) for this box score */
   periods?: Period1[];
+  /** The player game stats of this box score */
   playerGames?: PlayerGame4[];
+  /** The team game stats of this box score */
   teamGames?: TeamGame4[];
+  /** The plays in which either team scoring during the game */
   scoringPlays?: ScoringPlay3[];
 };
 

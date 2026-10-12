@@ -5,8 +5,11 @@ import { play1Schema, type Play1 } from "./play1.js";
 import { quarter1Schema, type Quarter1 } from "./quarter1.js";
 
 export type PlayByPlay1 = {
+  /** The details of the game associated with this play-by-play */
   game?: Game5;
+  /** The details of the quarters associated with this play-by-play */
   quarters?: Quarter1[];
+  /** The details of the plays associated with this play-by-play */
   plays?: Play1[];
 };
 

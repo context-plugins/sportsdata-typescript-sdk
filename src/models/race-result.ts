@@ -4,7 +4,12 @@ import { driverRaceSchema, type DriverRace } from "./driver-race.js";
 import { race1Schema, type Race1 } from "./race1.js";
 
 export type RaceResult = {
+  /**
+   * The details of the race including general information about the race itself (Ex: Name;
+   * DateTime; Track; WinnerID; IsInProgress; Scheduled Laps; etc.)
+   */
   race?: Race1;
+  /** The details of the drivers in this race */
   driverRaces?: DriverRace[];
 };
 

@@ -2,29 +2,39 @@ import * as s from "../core/validation/index.js";
 import type { Schema } from "../core/validation/schema.js";
 
 export type CareerStat = {
+  /** The unique ID of this fighter */
   fighterId?: number | null;
+  /** The first name of the fighter */
   firstName?: string | null;
+  /** The last name of the fighter */
   lastName?: string | null;
+  /** Significant strikes landed per minute over the fighter's career */
   sigStrikesLandedPerMinute?: number | null;
+  /** Significant strikes landed divided by strikes attempted over the fighter's career */
   sigStrikeAccuracy?: number | null;
+  /** Average takedowns landed per 15 minutes in the fighter's career */
   takedownAverage?: number | null;
+  /** Average number of submissions attempted per 15 minutes in the fighter's career */
   submissionAverage?: number | null;
+  /** The percentage of wins ending in a knockout by the fighter */
   knockoutPercentage?: number | null;
+  /** Percentage of wins ending by TKO in the fighter's career */
   technicalKnockoutPercentage?: number | null;
+  /** The percentage of wins ending in a decision by the fighter in their career */
   decisionPercentage?: number | null;
 };
 
 export const careerStatSchema: Schema<CareerStat> = s.object<CareerStat>({
-  fighterId: s.optionalNullable(s.number()),
+  fighterId: s.optionalNullable(s.int()),
   firstName: s.optionalNullable(s.string()),
   lastName: s.optionalNullable(s.string()),
-  sigStrikesLandedPerMinute: s.optionalNullable(s.number()),
-  sigStrikeAccuracy: s.optionalNullable(s.number()),
-  takedownAverage: s.optionalNullable(s.number()),
-  submissionAverage: s.optionalNullable(s.number()),
-  knockoutPercentage: s.optionalNullable(s.number()),
-  technicalKnockoutPercentage: s.optionalNullable(s.number()),
-  decisionPercentage: s.optionalNullable(s.number()),
+  sigStrikesLandedPerMinute: s.optionalNullable(s.float64()),
+  sigStrikeAccuracy: s.optionalNullable(s.float64()),
+  takedownAverage: s.optionalNullable(s.float64()),
+  submissionAverage: s.optionalNullable(s.float64()),
+  knockoutPercentage: s.optionalNullable(s.float64()),
+  technicalKnockoutPercentage: s.optionalNullable(s.float64()),
+  decisionPercentage: s.optionalNullable(s.float64()),
   _keysMap: {
     fighterId: "FighterId",
     firstName: "FirstName",

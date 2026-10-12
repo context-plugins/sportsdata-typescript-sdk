@@ -4,7 +4,7 @@
 
 Accessor: `client.nflV3RotoBallerPremiumNews` · Source: `src/resources/nfl-v3-roto-baller-premium-news.ts` · 3 operations · Request and error types: namespace `NflV3RotoBallerPremiumNews`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nflV3NewsRotoballerPremiumNews
 
@@ -13,7 +13,7 @@ Accessor: `client.nflV3RotoBallerPremiumNews` · Source: `src/resources/nfl-v3-r
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsRequest` (1):
@@ -35,7 +35,7 @@ Accessor: `client.nflV3RotoBallerPremiumNews` · Source: `src/resources/nfl-v3-r
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsByDateRequest` (2):
@@ -58,7 +58,7 @@ Accessor: `client.nflV3RotoBallerPremiumNews` · Source: `src/resources/nfl-v3-r
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3RotoBallerPremiumNews.NflV3NewsRotoballerPremiumNewsByTeamRequest` (2):

@@ -1,6 +1,9 @@
 import { buildAuthSchemes, type AuthSchemes } from "./auth-schemes.js";
-import { DEFAULT_CLIENT_OPTIONS, type ClientOptions } from "./client-options.js";
+import type { ClientOptions } from "./client-options.js";
+import { buildCoreClientOptions } from "./core/client-options.js";
 import { RawClient } from "./core/raw-client.js";
+import * as host from "./core/runtime-environment.js";
+import * as s from "./core/validation/index.js";
 import { CbbV3Odds } from "./resources/cbb-v3-odds.js";
 import { CbbV3Scores } from "./resources/cbb-v3-scores.js";
 import { CbbV3Stats } from "./resources/cbb-v3-stats.js";
@@ -53,6 +56,13 @@ import { SoccerV4Stats } from "./resources/soccer-v4-stats.js";
 import { WnbaV3Scores } from "./resources/wnba-v3-scores.js";
 import { buildServers, type Servers } from "./servers.js";
 
+/**
+ * NFL API - OpenAPI 3.1 Specification, NBA API - OpenAPI 3.1 Specification, MLB API - OpenAPI 3.1
+ * Specification, NHL API - OpenAPI 3.1 Specification, CFB API - OpenAPI 3.1 Specification, CBB API
+ * - OpenAPI 3.1 Specification, WNBA API - OpenAPI 3.1 Specification, CWBB API - OpenAPI 3.1
+ * Specification, SOCCER API - OpenAPI 3.1 Specification, GOLF API - OpenAPI 3.1 Specification,
+ * NASCAR API - OpenAPI 3.1 Specification, MMA API - OpenAPI 3.1 Specification
+ */
 export class SportsDataIoClient {
   readonly #rawClient: RawClient;
   readonly #servers: Servers;
@@ -108,18 +118,22 @@ export class SportsDataIoClient {
   #mmaV3Odds?: MmaV3Odds;
   #mmaV3Stats?: MmaV3Stats;
 
-  constructor(clientOptions: Partial<ClientOptions> = {}) {
-    const options = { ...DEFAULT_CLIENT_OPTIONS, ...clientOptions };
-
+  constructor(options: ClientOptions = {}) {
     this.#rawClient = new RawClient({
-      timeout: options.timeout,
-      defaultHeaders: [],
+      ...buildCoreClientOptions(options, "SPORTS_DATA_IO_CLIENT_LOG"),
+      defaultHeaders: [
+        { name: "User-Agent", value: "SportsDataIoClient/1.0.0 TypeScript", schema: s.string() },
+        { name: "X-APIMatic-Lang", value: "TypeScript", schema: s.string() },
+        { name: "X-APIMatic-Package-Version", value: "1.0.0", schema: s.string() },
+        { name: "X-APIMatic-Gen-Version", value: "4.0.0", schema: s.string() },
+        { name: "X-APIMatic-OS", value: host.operatingSystem(), schema: s.optional(s.string()) },
+        { name: "X-APIMatic-Runtime", value: host.runtimeDescription(), schema: s.optional(s.string()) },
+      ],
       defaultQuery: [],
       defaultPathParams: [],
-      fetch: options.fetch,
     });
 
-    this.#servers = buildServers(options.serverEnvironment, options.serverOptions);
+    this.#servers = buildServers(options);
 
     this.#auth = buildAuthSchemes(options);
   }

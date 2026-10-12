@@ -4,7 +4,7 @@
 
 Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 operations · Request and error types: namespace `MlbV3Odds`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### mlbV3OddsBettingEventsByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingEventsByDateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingEventsBySeasonRequest` (2):
@@ -59,7 +59,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingFuturesBySeasonRequest` (2):
@@ -82,7 +82,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingFuturesBySeasonSportsbookGroupRequest` (3):
@@ -106,7 +106,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketRequest` (2):
@@ -129,7 +129,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketSportsbookGroupRequest` (4):
@@ -155,7 +155,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketsByEventRequest` (3):
@@ -180,7 +180,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketsByEventSportsbookGroupRequest` (4):
@@ -206,7 +206,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketsByGameRequest` (3):
@@ -231,7 +231,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketsByGameSportsbookGroupRequest` (4):
@@ -257,7 +257,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketsByMarketTypeRequest` (4):
@@ -283,7 +283,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMarketsByMarketTypeSportsbookGroupRequest` (5):
@@ -310,7 +310,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingMetadataRequest` (1):
@@ -332,7 +332,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingPlayerPropsByGameRequest` (3):
@@ -357,7 +357,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingPlayerPropsByGameSportsbookGroupRequest` (4):
@@ -383,7 +383,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketResult`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingResultsByMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingResultsByMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingResultsByMarketRequest` (2):
@@ -406,7 +406,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketResult`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingResultsByMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingResultsByMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingResultsByMarketSportsbookGroupRequest` (3):
@@ -430,7 +430,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameBettingSplit1`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingSplitsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingSplitsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingSplitsByGameRequest` (2):
@@ -453,7 +453,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketSplit`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingSplitsByBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingSplitsByBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingSplitsByBettingMarketRequest` (2):
@@ -476,7 +476,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `MatchupTrends2`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingTrendsByMatchupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingTrendsByMatchupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingTrendsByMatchupRequest` (3):
@@ -500,7 +500,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamTrends1`
-- **Error**: `MlbV3Odds.MlbV3OddsBettingTrendsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsBettingTrendsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsBettingTrendsByTeamRequest` (2):
@@ -523,7 +523,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsInGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsInGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsInGameOddsByDateRequest` (2):
@@ -546,7 +546,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsInGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsInGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsInGameOddsByDateSportsbookGroupRequest` (3):
@@ -570,7 +570,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsInGameOddsLineMovementRequest` (2):
@@ -593,7 +593,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsInGameOddsLineMovementSportsbookGroupRequest` (3):
@@ -617,7 +617,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsInGameOddsLineMovementWithResultingSportsbookGroupRequest` (3):
@@ -641,7 +641,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsPeriodGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsPeriodGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsPeriodGameOddsByDateRequest` (2):
@@ -664,7 +664,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsPeriodGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsPeriodGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsPeriodGameOddsLineMovementRequest` (2):
@@ -687,7 +687,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsByDateSportsbookGroupRequest` (3):
@@ -711,7 +711,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupRequest` (3):
@@ -735,7 +735,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupRequest` (3):
@@ -759,7 +759,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsPreGameOddsByDateRequest` (2):
@@ -782,7 +782,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsPreGameOddsLineMovementRequest` (2):
@@ -805,7 +805,7 @@ Accessor: `client.mlbV3Odds` · Source: `src/resources/mlb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Odds.MlbV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Odds.MlbV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Odds.MlbV3OddsSportsbooksByActiveRequest` (1):

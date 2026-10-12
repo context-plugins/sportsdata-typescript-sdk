@@ -4,7 +4,7 @@
 
 Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 operations · Request and error types: namespace `MmaV3Odds`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### mmaV3OddsBettingEventsByEvent
 
@@ -13,7 +13,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Odds.MmaV3OddsBettingEventsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsBettingEventsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsBettingEventsByEventRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Odds.MmaV3OddsBettingEventsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsBettingEventsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsBettingEventsUpcomingRequest` (1):
@@ -58,7 +58,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Odds.MmaV3OddsBettingFighterPropsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsBettingFighterPropsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsBettingFighterPropsByEventRequest` (3):
@@ -83,7 +83,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket4`
-- **Error**: `MmaV3Odds.MmaV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsBettingMarketRequest` (2):
@@ -106,7 +106,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Odds.MmaV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsBettingMarketsByEventRequest` (3):
@@ -131,7 +131,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Odds.MmaV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsBettingMarketsByMarketTypeRequest` (4):
@@ -157,7 +157,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection4`
-- **Error**: `MmaV3Odds.MmaV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsBettingMetadataRequest` (1):
@@ -179,7 +179,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `EventOdds`
-- **Error**: `MmaV3Odds.MmaV3OddsEventFightOddsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsEventFightOddsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsEventFightOddsRequest` (2):
@@ -202,7 +202,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `EventOdds`
-- **Error**: `MmaV3Odds.MmaV3OddsEventFightOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsEventFightOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsEventFightOddsLineMovementRequest` (2):
@@ -225,7 +225,7 @@ Accessor: `client.mmaV3Odds` · Source: `src/resources/mma-v3-odds.ts` · 10 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Odds.MmaV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Odds.MmaV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Odds.MmaV3OddsSportsbooksByActiveRequest` (1):

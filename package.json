@@ -1,6 +1,6 @@
 {
   "name": "sports-data-io",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "NFL API - OpenAPI 3.1 Specification, NBA API - OpenAPI 3.1 Specification, MLB API - OpenAPI 3.1 Specification, NHL API - OpenAPI 3.1 Specification, CFB API - OpenAPI 3.1 Specification, CBB API - OpenAPI 3.1 Specification, WNBA API - OpenAPI 3.1 Specification, CWBB API - OpenAPI 3.1 Specification, SOCCER API - OpenAPI 3.1 Specification, GOLF API - OpenAPI 3.1 Specification, NASCAR API - OpenAPI 3.1 Specification, MMA API - OpenAPI 3.1 Specification",
   "type": "module",
   "exports": {
@@ -43,7 +43,7 @@
   ],
   "sideEffects": false,
   "engines": {
-    "node": ">=20"
+    "node": ">=20.3"
   },
   "scripts": {
     "prepare": "tshy",
@@ -65,6 +65,6 @@
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "zod": "^3.25.0 || ^4.0.0"
+    "zod": "^4.1.0"
   }
 }

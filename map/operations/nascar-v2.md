@@ -4,7 +4,7 @@
 
 Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operations · Request and error types: namespace `NascarV2`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nascarV2DriverDriverProfilesByDriver
 
@@ -13,7 +13,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Driver`
-- **Error**: `NascarV2.NascarV2DriverDriverProfilesByDriverError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2DriverDriverProfilesByDriverError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2DriverDriverProfilesByDriverRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DriverRaceProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV2.NascarV2DriverraceprojectionsProjectedPlayerRaceStatsByRaceError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2DriverraceprojectionsProjectedPlayerRaceStatsByRaceError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2DriverraceprojectionsProjectedPlayerRaceStatsByRaceRequest` (2):
@@ -59,7 +59,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Driver[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV2.NascarV2DriversDriverProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2DriversDriverProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2DriversDriverProfilesAllRequest` (1):
@@ -81,7 +81,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DriverBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV2.NascarV2DriversbyactiveDriversByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2DriversbyactiveDriversByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2DriversbyactiveDriversByActiveRequest` (1):
@@ -103,7 +103,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DriverRaceBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV2.NascarV2EntrylistbyraceEntryListByRaceError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2EntrylistbyraceEntryListByRaceError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2EntrylistbyraceEntryListByRaceRequest` (2):
@@ -126,7 +126,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `FantasyRace`
-- **Error**: `NascarV2.NascarV2FantasygamestatsbyraceFantasyPointsByRaceError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2FantasygamestatsbyraceFantasyPointsByRaceError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2FantasygamestatsbyraceFantasyPointsByRaceRequest` (2):
@@ -149,7 +149,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `RaceResultBasic`
-- **Error**: `NascarV2.NascarV2LeaderboardbasicLeaderboardBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2LeaderboardbasicLeaderboardBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2LeaderboardbasicLeaderboardBasicRequest` (2):
@@ -172,7 +172,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `RaceResultBasic`
-- **Error**: `NascarV2.NascarV2LeaderboardbasicfinalLeaderboardBasicFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2LeaderboardbasicfinalLeaderboardBasicFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2LeaderboardbasicfinalLeaderboardBasicFinalRequest` (2):
@@ -195,7 +195,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `RaceResult`
-- **Error**: `NascarV2.NascarV2RaceresultLeaderboardLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2RaceresultLeaderboardLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2RaceresultLeaderboardLiveFinalRequest` (2):
@@ -218,7 +218,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `RaceResult`
-- **Error**: `NascarV2.NascarV2RaceresultfinalLeaderboardFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2RaceresultfinalLeaderboardFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2RaceresultfinalLeaderboardFinalRequest` (2):
@@ -241,7 +241,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Race[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV2.NascarV2RacesSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2RacesSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2RacesSchedulesRequest` (2):
@@ -264,7 +264,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Series1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV2.NascarV2SeriesSeriesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2SeriesSeriesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2SeriesSeriesRequest` (1):
@@ -286,7 +286,7 @@ Accessor: `client.nascarV2` · Source: `src/resources/nascar-v2.ts` · 13 operat
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Tracks[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NascarV2.NascarV2TracksTracksError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NascarV2.NascarV2TracksTracksError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NascarV2.NascarV2TracksTracksRequest` (2):

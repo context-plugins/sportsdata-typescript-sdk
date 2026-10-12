@@ -4,7 +4,7 @@
 
 Accessor: `client.soccerV4Projections` · Source: `src/resources/soccer-v4-projections.ts` · 4 operations · Request and error types: namespace `SoccerV4Projections`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### soccerV4ProjectionsDfsSlatesByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.soccerV4Projections` · Source: `src/resources/soccer-v4-proje
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Projections.SoccerV4ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Projections.SoccerV4ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Projections.SoccerV4ProjectionsDfsSlatesByDateRequest` (3):
@@ -37,7 +37,7 @@ Accessor: `client.soccerV4Projections` · Source: `src/resources/soccer-v4-proje
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Projections.SoccerV4ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Projections.SoccerV4ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Projections.SoccerV4ProjectionsPlayerDetailsByInjuredRequest` (2):
@@ -60,7 +60,7 @@ Accessor: `client.soccerV4Projections` · Source: `src/resources/soccer-v4-proje
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Projections.SoccerV4ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Projections.SoccerV4ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Projections.SoccerV4ProjectionsProjectedPlayerGameStatsByDateRequest` (3):
@@ -84,7 +84,7 @@ Accessor: `client.soccerV4Projections` · Source: `src/resources/soccer-v4-proje
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Projections.SoccerV4ProjectionsUpcomingDfsSlatesByCompetitionError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Projections.SoccerV4ProjectionsUpcomingDfsSlatesByCompetitionError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Projections.SoccerV4ProjectionsUpcomingDfsSlatesByCompetitionRequest` (2):

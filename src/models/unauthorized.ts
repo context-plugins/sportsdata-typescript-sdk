@@ -9,8 +9,8 @@ export type Unauthorized = {
 };
 
 export const unauthorizedSchema: Schema<Unauthorized> = s.object<Unauthorized>({
-  httpStatusCode: s.optional(s.number()),
-  code: s.optional(s.number()),
+  httpStatusCode: s.optional(s.int()),
+  code: s.optional(s.int()),
   description: s.optional(s.string()),
   help: s.optional(s.string()),
   _keysMap: {

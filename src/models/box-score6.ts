@@ -18,21 +18,37 @@ import { referee8Schema, type Referee8 } from "./referee8.js";
 import { teamGame7Schema, type TeamGame7 } from "./team-game7.js";
 
 export type BoxScore6 = {
+  /** The game details associated with this box score */
   game?: Game25;
+  /** The coach of the away team */
   awayTeamCoach?: Coach3;
+  /** The coach of the home team */
   homeTeamCoach?: Coach1;
+  /** The main referee */
   mainReferee?: Referee8;
+  /** The first assistant referee */
   assistantReferee1?: Referee11;
+  /** The second assistant referee */
   assistantReferee2?: Referee21;
+  /** The information about the fourth referee working the match */
   fourthReferee?: Referee3;
+  /** The first additional assistant referee */
   additionalAssistantReferee1?: Referee4;
+  /** The second additional assistant referee */
   additionalAssistantReferee2?: Referee5;
+  /** The details of the lineups for each team */
   lineups?: Lineup4[];
+  /** The details of the goals scored during this game */
   goals?: Goal[];
+  /** The details of the bookings (yellow/red cards) recorded during this game */
   bookings?: Booking[];
+  /** The details of the penalty shootouts recorded during this game */
   penaltyShootouts?: PenaltyShootout[];
+  /** The stats by the team in the game */
   teamGames?: TeamGame7[];
+  /** The player stats for this game */
   playerGames?: PlayerGame7[];
+  /** The name of the referee in charge of the video reviews (VAR) */
   videoAssistantReferee?: Referee6;
 };
 

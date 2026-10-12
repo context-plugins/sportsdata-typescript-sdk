@@ -4,7 +4,9 @@ import { playerTournamentBasicSchema, type PlayerTournamentBasic } from "./playe
 import { tournamentBasic2Schema, type TournamentBasic2 } from "./tournament-basic2.js";
 
 export type LeaderboardBasic = {
+  /** The details of the tournament for this event */
   tournament?: TournamentBasic2;
+  /** The details of the golfers who competed in this tournament */
   players?: PlayerTournamentBasic[];
 };
 

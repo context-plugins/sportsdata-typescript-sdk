@@ -4,7 +4,7 @@
 
 Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 operations · Request and error types: namespace `MlbV3Stats`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### mlbV3StatsBatterVsPitcherStats
 
@@ -13,7 +13,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsBatterVsPitcherStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsBatterVsPitcherStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsBatterVsPitcherStatsRequest` (3):
@@ -37,7 +37,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore1`
-- **Error**: `MlbV3Stats.MlbV3StatsBoxScoreFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsBoxScoreFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsBoxScoreFinalRequest` (2):
@@ -60,7 +60,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore1`
-- **Error**: `MlbV3Stats.MlbV3StatsBoxScoreLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsBoxScoreLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsBoxScoreLiveFinalRequest` (2):
@@ -83,7 +83,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsBoxScoresByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsBoxScoresByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsBoxScoresByDateFinalRequest` (2):
@@ -106,7 +106,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsBoxScoresByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsBoxScoresByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsBoxScoresByDateLiveFinalRequest` (2):
@@ -129,7 +129,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsBoxScoresDeltaByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsBoxScoresDeltaByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsBoxScoresDeltaByDateRequest` (3):
@@ -153,7 +153,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `FantasyGame2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsFantasyPointsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsFantasyPointsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsFantasyPointsByDateRequest` (2):
@@ -176,7 +176,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGame2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerGameLogsBySeasonRequest` (4):
@@ -201,7 +201,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGame2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerGameStatsByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerGameStatsByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerGameStatsByDateFinalRequest` (2):
@@ -224,7 +224,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGame2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerGameStatsByDateLiveFinalRequest` (2):
@@ -247,7 +247,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerSeasonSplitStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerSeasonSplitStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerSeasonSplitStatsRequest` (3):
@@ -272,7 +272,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerSeasonStatsRequest` (2):
@@ -295,7 +295,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByAwayError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByAwayError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByAwayRequest` (2):
@@ -318,7 +318,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByHomeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByHomeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByHomeRequest` (2):
@@ -341,7 +341,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerSeasonStatsByTeamRequest` (3):
@@ -365,7 +365,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsPlayerSeasonStatsSplitByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsPlayerSeasonStatsSplitByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsPlayerSeasonStatsSplitByTeamRequest` (2):
@@ -388,7 +388,7 @@ Accessor: `client.mlbV3Stats` · Source: `src/resources/mlb-v3-stats.ts` · 17 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Stats.MlbV3StatsTeamHittingVsStartingPitcherError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Stats.MlbV3StatsTeamHittingVsStartingPitcherError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Stats.MlbV3StatsTeamHittingVsStartingPitcherRequest` (3):

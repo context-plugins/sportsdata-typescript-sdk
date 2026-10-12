@@ -4,7 +4,7 @@
 
 Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations · Request and error types: namespace `GolfV2`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### golfV2CoursesCourses
 
@@ -13,7 +13,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Courses[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2CoursesCoursesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2CoursesCoursesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2CoursesCoursesRequest` (1):
@@ -35,7 +35,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Season7`
-- **Error**: `GolfV2.GolfV2CurrentseasonSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2CurrentseasonSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2CurrentseasonSeasonCurrentRequest` (1):
@@ -57,7 +57,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlateWithOwnershipProjection`
-- **Error**: `GolfV2.GolfV2DfsslateownershipprojectionsbyslateidDfsSlateOwnershipProjectionsBySlateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2DfsslateownershipprojectionsbyslateidDfsSlateOwnershipProjectionsBySlateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2DfsslateownershipprojectionsbyslateidDfsSlateOwnershipProjectionsBySlateRequest` (2):
@@ -80,7 +80,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2DfsslatesbytournamentDfsSlatesByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2DfsslatesbytournamentDfsSlatesByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2DfsslatesbytournamentDfsSlatesByTournamentRequest` (2):
@@ -103,7 +103,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `FantasyTournament`
-- **Error**: `GolfV2.GolfV2FantasygamestatsbytournamentFantasyPointsByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2FantasygamestatsbytournamentFantasyPointsByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2FantasygamestatsbytournamentFantasyPointsByTournamentRequest` (2):
@@ -126,7 +126,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Leaderboard`
-- **Error**: `GolfV2.GolfV2LeaderboardLeaderboardLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2LeaderboardLeaderboardLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2LeaderboardLeaderboardLiveFinalRequest` (2):
@@ -149,7 +149,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `LeaderboardBasic`
-- **Error**: `GolfV2.GolfV2LeaderboardbasicLeaderboardBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2LeaderboardbasicLeaderboardBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2LeaderboardbasicLeaderboardBasicRequest` (2):
@@ -172,7 +172,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `LeaderboardBasic`
-- **Error**: `GolfV2.GolfV2LeaderboardbasicfinalLeaderboardBasicFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2LeaderboardbasicfinalLeaderboardBasicFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2LeaderboardbasicfinalLeaderboardBasicFinalRequest` (2):
@@ -195,7 +195,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Leaderboard`
-- **Error**: `GolfV2.GolfV2LeaderboardfinalLeaderboardFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2LeaderboardfinalLeaderboardFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2LeaderboardfinalLeaderboardFinalRequest` (2):
@@ -218,7 +218,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2NewsNewsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2NewsNewsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2NewsNewsRequest` (1):
@@ -240,7 +240,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2NewsbydateNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2NewsbydateNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2NewsbydateNewsByDateRequest` (2):
@@ -263,7 +263,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player8`
-- **Error**: `GolfV2.GolfV2PlayerPlayerError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayerPlayerError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayerPlayerRequest` (2):
@@ -286,7 +286,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player8[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2PlayersPlayerProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayersPlayerProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayersPlayerProfilesAllRequest` (1):
@@ -308,7 +308,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason9[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2PlayerseasonstatsPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayerseasonstatsPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayerseasonstatsPlayerSeasonStatsRequest` (2):
@@ -331,7 +331,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerTournamentBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2PlayertournamentholescoresPlayerHoleScoresByTournamentLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayertournamentholescoresPlayerHoleScoresByTournamentLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayertournamentholescoresPlayerHoleScoresByTournamentLiveFinalRequest` (2):
@@ -354,7 +354,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerTournamentBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2PlayertournamentholescoresfinalPlayerHoleScoresByTournamentFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayertournamentholescoresfinalPlayerHoleScoresByTournamentFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayertournamentholescoresfinalPlayerHoleScoresByTournamentFinalRequest` (2):
@@ -377,7 +377,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerTournamentProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2PlayertournamentprojectionstatsPlayerProjectedStatsByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayertournamentprojectionstatsPlayerProjectedStatsByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayertournamentprojectionstatsPlayerProjectedStatsByTournamentRequest` (2):
@@ -400,7 +400,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentRound[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2PlayertournamentroundscoresScoresByTournamentLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayertournamentroundscoresScoresByTournamentLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayertournamentroundscoresScoresByTournamentLiveFinalRequest` (2):
@@ -423,7 +423,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentRound[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2PlayertournamentroundscoresfinalScoresByTournamentFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2PlayertournamentroundscoresfinalScoresByTournamentFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2PlayertournamentroundscoresfinalScoresByTournamentFinalRequest` (2):
@@ -446,7 +446,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason9[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2RankingsRankingsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2RankingsRankingsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2RankingsRankingsRequest` (2):
@@ -469,7 +469,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Tournament1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2TournamentsScheduleBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2TournamentsScheduleBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2TournamentsScheduleBySeasonRequest` (2):
@@ -492,7 +492,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Tournament1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2TournamentsSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2TournamentsSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2TournamentsSchedulesRequest` (1):
@@ -514,7 +514,7 @@ Accessor: `client.golfV2` · Source: `src/resources/golf-v2.ts` · 23 operations
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlateWithOwnershipProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV2.GolfV2UpcomingdfsslateownershipprojectionsDfsSlateOwnershipProjectionsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV2.GolfV2UpcomingdfsslateownershipprojectionsDfsSlateOwnershipProjectionsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV2.GolfV2UpcomingdfsslateownershipprojectionsDfsSlateOwnershipProjectionsUpcomingRequest` (1):

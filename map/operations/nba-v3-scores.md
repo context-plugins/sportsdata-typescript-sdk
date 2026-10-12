@@ -4,7 +4,7 @@
 
 Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27 operations · Request and error types: namespace `NbaV3Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nbaV3ScoresAreGamesInProgress
 
@@ -13,7 +13,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `boolean` — a bare `application/json` boolean; the success type *is* the boolean
-- **Error**: `NbaV3Scores.NbaV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresAreGamesInProgressRequest` (1):
@@ -34,7 +34,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamDepthChart1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresDepthChartsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresDepthChartsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresDepthChartsRequest` (1):
@@ -56,7 +56,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresGamesByDateFinalRequest` (2):
@@ -79,7 +79,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresGamesByDateLiveFinalRequest` (2):
@@ -102,7 +102,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresGamesBasicByDateFinalRequest` (2):
@@ -125,7 +125,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresGamesBasicByDateLiveFinalRequest` (2):
@@ -148,7 +148,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresNewsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresNewsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresNewsRequest` (1):
@@ -170,7 +170,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresNewsByDateRequest` (2):
@@ -193,7 +193,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresPlayerDetailsByActiveRequest` (1):
@@ -215,7 +215,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresPlayerDetailsByFreeAgentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresPlayerDetailsByFreeAgentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresPlayerDetailsByFreeAgentRequest` (1):
@@ -237,7 +237,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresPlayerDetailsByTeamRequest` (2):
@@ -260,7 +260,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresPlayerProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresPlayerProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresPlayerProfilesByActiveRequest` (1):
@@ -282,7 +282,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresPlayerProfilesByFreeAgentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresPlayerProfilesByFreeAgentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresPlayerProfilesByFreeAgentRequest` (1):
@@ -304,7 +304,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresPlayersProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresPlayersProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresPlayersProfilesByTeamRequest` (2):
@@ -327,7 +327,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Referee1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresRefereesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresRefereesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresRefereesRequest` (1):
@@ -349,7 +349,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresSchedulesRequest` (2):
@@ -372,7 +372,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScheduleBasic1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresSchedulesBasicRequest` (2):
@@ -395,7 +395,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Season`
-- **Error**: `NbaV3Scores.NbaV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresSeasonCurrentRequest` (1):
@@ -417,7 +417,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Stadium1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresStadiumsRequest` (1):
@@ -439,7 +439,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Standing1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresStandingsRequest` (2):
@@ -462,7 +462,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresTeamGameLogsBySeasonRequest` (4):
@@ -487,7 +487,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresTeamGameStatsByDateLiveFinalRequest` (2):
@@ -510,7 +510,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresTeamProfilesAllRequest` (1):
@@ -532,7 +532,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresTeamProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresTeamProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresTeamProfilesByActiveRequest` (1):
@@ -554,7 +554,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresTeamProfilesBySeasonRequest` (2):
@@ -577,7 +577,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamSeason1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresTeamSeasonStatsRequest` (2):
@@ -600,7 +600,7 @@ Accessor: `client.nbaV3Scores` · Source: `src/resources/nba-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Transaction[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Scores.NbaV3ScoresTransactionsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Scores.NbaV3ScoresTransactionsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Scores.NbaV3ScoresTransactionsRequest` (2):

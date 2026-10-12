@@ -4,7 +4,7 @@
 
 Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections.ts` · 8 operations · Request and error types: namespace `MlbV3Projections`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### mlbV3ProjectionsDepthCharts
 
@@ -13,7 +13,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamDepthChart1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Projections.MlbV3ProjectionsDepthChartsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsDepthChartsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsDepthChartsRequest` (1):
@@ -35,7 +35,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlateWithOwnershipProjection`
-- **Error**: `MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateRequest` (2):
@@ -58,7 +58,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlateWithOwnershipProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingRequest` (1):
@@ -80,7 +80,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Projections.MlbV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsDfsSlatesByDateRequest` (2):
@@ -103,7 +103,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Projections.MlbV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsPlayerDetailsByInjuredRequest` (1):
@@ -125,7 +125,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Projections.MlbV3ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsProjectedPlayerGameStatsByDateRequest` (2):
@@ -148,7 +148,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeasonProjection2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Projections.MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpRequest` (2):
@@ -171,7 +171,7 @@ Accessor: `client.mlbV3Projections` · Source: `src/resources/mlb-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `StartingLineups1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MlbV3Projections.MlbV3ProjectionsStartingLineupsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MlbV3Projections.MlbV3ProjectionsStartingLineupsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MlbV3Projections.MlbV3ProjectionsStartingLineupsByDateRequest` (2):

@@ -4,7 +4,7 @@
 
 Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44 operations · Request and error types: namespace `NflV3Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nflV3ScoresAreGamesInProgress
 
@@ -13,7 +13,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `boolean` — a bare `application/json` boolean; the success type *is* the boolean
-- **Error**: `NflV3Scores.NflV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresAreGamesInProgressRequest` (1):
@@ -34,7 +34,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Bye[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresByeWeeksError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresByeWeeksError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresByeWeeksRequest` (2):
@@ -57,7 +57,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamDepthChart[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresDepthChartsAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresDepthChartsAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresDepthChartsAllRequest` (1):
@@ -79,7 +79,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamDepthChart[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresDepthChartsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresDepthChartsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresDepthChartsByActiveRequest` (1):
@@ -101,7 +101,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamDepthChartWeekly[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresDepthChartsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresDepthChartsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresDepthChartsByWeekRequest` (3):
@@ -125,7 +125,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Score[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresGamesByDateFinalRequest` (2):
@@ -148,7 +148,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Score[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresGamesByDateLiveFinalRequest` (2):
@@ -171,7 +171,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Score[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresGamesBySeasonLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresGamesBySeasonLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresGamesBySeasonLiveFinalRequest` (2):
@@ -194,7 +194,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Score[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresGamesByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresGamesByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresGamesByWeekFinalRequest` (3):
@@ -218,7 +218,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Score[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresGamesByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresGamesByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresGamesByWeekLiveFinalRequest` (3):
@@ -242,7 +242,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresGamesBasicByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresGamesBasicByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresGamesBasicByWeekFinalRequest` (3):
@@ -266,7 +266,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresGamesBasicByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresGamesBasicByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresGamesBasicByWeekLiveFinalRequest` (3):
@@ -290,7 +290,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresNewsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresNewsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresNewsRequest` (1):
@@ -312,7 +312,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresNewsByDateRequest` (2):
@@ -335,7 +335,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresNewsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresNewsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresNewsByTeamRequest` (2):
@@ -358,7 +358,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerDetailsAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerDetailsAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerDetailsAllRequest` (1):
@@ -380,7 +380,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerDetailsByFreeAgentsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerDetailsByFreeAgentsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerDetailsByFreeAgentsRequest` (1):
@@ -402,7 +402,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerDetailsByRookieDraftYearError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerDetailsByRookieDraftYearError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerDetailsByRookieDraftYearRequest` (2):
@@ -425,7 +425,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerDetail[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerDetailsByTeamRequest` (2):
@@ -448,7 +448,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerGameLogsBySeasonRequest` (4):
@@ -473,7 +473,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerProfilesAllRequest` (1):
@@ -495,7 +495,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerProfilesByFreeAgentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerProfilesByFreeAgentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerProfilesByFreeAgentRequest` (1):
@@ -517,7 +517,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerProfilesByRookieDraftYearError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerProfilesByRookieDraftYearError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerProfilesByRookieDraftYearRequest` (2):
@@ -540,7 +540,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresPlayerProfilesByTeamRequest` (2):
@@ -563,7 +563,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Referee[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresRefereesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresRefereesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresRefereesRequest` (1):
@@ -585,7 +585,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Schedule[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresSchedulesRequest` (2):
@@ -608,7 +608,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScheduleBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresSchedulesBasicRequest` (2):
@@ -631,7 +631,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Score[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresScoresByWeekSimulationError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresScoresByWeekSimulationError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresScoresByWeekSimulationRequest` (2):
@@ -654,7 +654,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `NflV3Scores.NflV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresSeasonCurrentRequest` (1):
@@ -675,7 +675,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `NflV3Scores.NflV3ScoresSeasonLastCompletedError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresSeasonLastCompletedError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresSeasonLastCompletedRequest` (1):
@@ -696,7 +696,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `NflV3Scores.NflV3ScoresSeasonUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresSeasonUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresSeasonUpcomingRequest` (1):
@@ -717,7 +717,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Stadium[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresStadiumsRequest` (1):
@@ -739,7 +739,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Standing[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresStandingsRequest` (2):
@@ -762,7 +762,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTeamGameStatsLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTeamGameStatsLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTeamGameStatsLiveFinalRequest` (3):
@@ -786,7 +786,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTeamProfilesAllRequest` (1):
@@ -808,7 +808,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTeamProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTeamProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTeamProfilesByActiveRequest` (1):
@@ -830,7 +830,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTeamProfilesBySeasonRequest` (2):
@@ -853,7 +853,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTeamProfilesBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTeamProfilesBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTeamProfilesBasicAllRequest` (1):
@@ -875,7 +875,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamSeason[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTeamSeasonStatsRequest` (2):
@@ -898,7 +898,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Timeframe[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTimeframesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTimeframesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTimeframesRequest` (2):
@@ -922,7 +922,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Transaction[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Scores.NflV3ScoresTransactionsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresTransactionsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresTransactionsByDateRequest` (2):
@@ -945,7 +945,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `NflV3Scores.NflV3ScoresWeekCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresWeekCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresWeekCurrentRequest` (1):
@@ -966,7 +966,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `NflV3Scores.NflV3ScoresWeekLastCompletedError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresWeekLastCompletedError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresWeekLastCompletedRequest` (1):
@@ -987,7 +987,7 @@ Accessor: `client.nflV3Scores` · Source: `src/resources/nfl-v3-scores.ts` · 44
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `NflV3Scores.NflV3ScoresWeekUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Scores.NflV3ScoresWeekUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Scores.NflV3ScoresWeekUpcomingRequest` (1):

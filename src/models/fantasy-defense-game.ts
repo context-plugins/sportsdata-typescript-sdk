@@ -3,228 +3,407 @@ import type { Schema } from "../core/validation/schema.js";
 import { scoringDetailSchema, type ScoringDetail } from "./scoring-detail.js";
 
 export type FantasyDefenseGame = {
+  /**
+   * A 9 digit unique code identifying the game that this record corresponds to. The GameID is
+   * composed of Season; SeasonType; Week and HomeTeam. Note: This value will be NULL for bye weeks
+   */
   gameKey?: string | null;
+  /**
+   * The type of season that this player corresponds to (1=Regular Season; 2=Preseason;
+   * 3=Postseason; 4=Offseason; 5=All-Star)
+   */
   seasonType?: number;
+  /** The NFL season of the game */
   season?: number;
+  /**
+   * The NFL week of the game (regular season: 1 to 18; preseason: 0 to 4; postseason: 1 to 4).
+   * Note: seasons after 2021 will have only 3 preseason weeks
+   */
   week?: number | null;
+  /** The date and time of the game (in US Eastern Time) */
   date?: string | null;
+  /** The abbreviation [Key] of the team */
   team?: string | null;
+  /** The abbreviation [Key] of the opponent team */
   opponent?: string | null;
+  /** Total points allowed by the team during the game */
   pointsAllowed?: number;
+  /** Total defensive and special teams touchdowns scored by the team in the game */
   touchdownsScored?: number;
+  /** Total defensive solo (unassisted) tackles by the team in the game */
   soloTackles?: number;
+  /** Total defensive assisted tackles by the team in the game */
   assistedTackles?: number;
+  /** Total defensive sacks by the team in the game */
   sacks?: number;
+  /** Total defensive sack yards by the team in the game */
   sackYards?: number;
+  /** Total passes defended by the team in the game */
   passesDefended?: number;
+  /** Total fumbles forced on defense by the team in the game */
   fumblesForced?: number;
+  /** Total defensive fumble recoveries by the team in the game */
   fumblesRecovered?: number;
+  /** Total fumble return yards by the team in the game */
   fumbleReturnYards?: number;
+  /** Total fumble return touchdowns by the team in the game */
   fumbleReturnTouchdowns?: number;
+  /** Total defensive interceptions by the team in the game */
   interceptions?: number;
+  /** Total defensive interception return yards by the team in the game */
   interceptionReturnYards?: number;
+  /** Total defensive interception return touchdowns by the team in the game */
   interceptionReturnTouchdowns?: number;
+  /**
+   * Total blocked kicks by team in the game. Note: BlockedKicks include Field Goals and Punts but
+   * NOT Extra Points
+   */
   blockedKicks?: number;
+  /** Total defensive safeties scored by the team in the game */
   safeties?: number;
+  /** Total punt returns by the team in the game */
   puntReturns?: number;
+  /** Total punt return yards by the team in the game */
   puntReturnYards?: number;
+  /** Total punt return touchdowns by the team in the game */
   puntReturnTouchdowns?: number;
+  /** The longest punt return by the team in the game */
   puntReturnLong?: number;
+  /** Total kickoff returns by the team in the game */
   kickReturns?: number;
+  /** Total kickoff return yards by the team in the game */
   kickReturnYards?: number;
+  /** Total kickoff return touchdowns by the team in the game */
   kickReturnTouchdowns?: number;
+  /** Longest kick return by the team in the game */
   kickReturnLong?: number;
+  /** Total blocked kick recovery return touchdowns for the team in the game */
   blockedKickReturnTouchdowns?: number | null;
+  /**
+   * Total field goal return touchdowns by the team in the game. Note: This field excludes blocked
+   * field goals
+   */
   fieldGoalReturnTouchdowns?: number | null;
+  /**
+   * Fantasy points allowed to opposing offensive players in the season. Note: positions include:
+   * QB; RB; WR; TE
+   */
   fantasyPointsAllowed?: number | null;
+  /** Fantasy points allowed to opposing quarterbacks by the team in the game */
   quarterbackFantasyPointsAllowed?: number | null;
+  /** Total fantasy points allowed to opposing running backs by the team in the game */
   runningbackFantasyPointsAllowed?: number | null;
+  /** Fantasy points allowed to opposing wide receivers */
   wideReceiverFantasyPointsAllowed?: number | null;
+  /** Fantasy points allowed to opposing tight ends by the team in the game */
   tightEndFantasyPointsAllowed?: number | null;
+  /** Fantasy points allowed to opponent kickers by the team in the game */
   kickerFantasyPointsAllowed?: number | null;
+  /** Total blocked kick recovery return yards for the team in the game */
   blockedKickReturnYards?: number | null;
+  /**
+   * Total field goal return yards by the team in the game. Note: This field excludes blocked field
+   * goals
+   */
   fieldGoalReturnYards?: number | null;
+  /**
+   * Total quarterback hits by the team in the game. Note: This is a defensive stat that includes
+   * sacks
+   */
   quarterbackHits?: number | null;
+  /**
+   * Total tackles for loss by the team in the game. Note: These are tackles behind the line of
+   * scrimmage for loss of yards (including sacks)
+   */
   tacklesForLoss?: number | null;
+  /** Total touchdowns scored by the defense */
   defensiveTouchdowns?: number | null;
+  /** Total special teams touchdowns scored by the team in the game */
   specialTeamsTouchdowns?: number | null;
+  /** Whether the game is over (true/false) */
   isGameOver?: boolean | null;
+  /** Fantasy points scored based on basic fantasy scoring system by the team's D/ST in the game */
   fantasyPoints?: number | null;
+  /** Stadium of the event */
   stadium?: string | null;
+  /** Temperature at game start (Fahrenheit) */
   temperature?: number | null;
+  /** The humidity percentage at the start of the game */
   humidity?: number | null;
+  /** The wind speed at the start of the game (in MPH) */
   windSpeed?: number | null;
+  /** Total third down attempts against the team in the game */
   thirdDownAttempts?: number | null;
+  /** Total third down conversions against the team in the game */
   thirdDownConversions?: number | null;
+  /** Opponent's fourth down attempts against the team in the game */
   fourthDownAttempts?: number | null;
+  /** Opponent's fourth down conversions against the team in the game */
   fourthDownConversions?: number | null;
+  /**
+   * Total number of points allowed by the team in the game to the opposing offense and special
+   * teams. Note: This field excludes points scored by the opponent's defense
+   */
   pointsAllowedByDefenseSpecialTeams?: number | null;
+  /** The team's D/ST salary for FanDuel daily fantasy contests */
   fanDuelSalary?: number | null;
+  /** The team's D/ST salary for DraftKings daily fantasy contests. */
   draftKingsSalary?: number | null;
+  /**
+   * The team's D/ST salary as calculated by SportsDataIO (formerly known as FantasyData). Based on
+   * the same salary cap as DraftKings contests ($50,000)
+   */
   fantasyDataSalary?: number | null;
+  /** The player's salary for Victiv daily fantasy contests. */
   victivSalary?: number | null;
+  /** Total successful two point conversion returns by the team in the game */
   twoPointConversionReturns?: number | null;
+  /** Fantasy points based on FanDuel's scoring system by the team in the game */
   fantasyPointsFanDuel?: number | null;
+  /** Fantasy points based on DraftKings' scoring system by the team in the game */
   fantasyPointsDraftKings?: number | null;
+  /** Offensive yards allowed by the team's defense in the game */
   offensiveYardsAllowed?: number | null;
+  /** The player's salary for Yahoo daily fantasy contests */
   yahooSalary?: number | null;
+  /**
+   * The unique PlayerID of the player as assigned by SportsDataIO for use when combining with
+   * player feeds. Note: this ID will stay with the player throughout their entire career
+   */
   playerId?: number | null;
+  /** Fantasy points based on Yahoo's daily fantasy scoring system by the team in the game */
   fantasyPointsYahoo?: number | null;
+  /** Whether the team is home or away */
   homeOrAway?: string | null;
+  /**
+   * The ranking of the opposing team's offense with regards to fantasy points allowed to fantasy
+   * DST
+   */
   opponentRank?: number | null;
+  /**
+   * The ranking of the opposing team's offense with regards to fantasy points allowed to fantasy
+   * DST
+   */
   opponentPositionRank?: number | null;
+  /** The team's D/ST salary for FantasyDraft daily fantasy contests. */
   fantasyDraftSalary?: number | null;
+  /** The unique ID of the team */
   teamId?: number | null;
+  /** The unique ID of this opponent team */
   opponentId?: number | null;
+  /** The date of the game (in US Eastern Time) */
   day?: string | null;
+  /** The date and time of the game (in US Eastern Time) */
   dateTime?: string | null;
+  /**
+   * A globally unique ID for this game. This value is guaranteed to be unique across all
+   * sports/leagues
+   */
   globalGameId?: number | null;
+  /**
+   * A globally unique ID for this team. This value is guaranteed to be unique across all
+   * sports/leagues
+   */
   globalTeamId?: number | null;
+  /**
+   * A globally unique ID for this team's opponent. This value is guaranteed to be unique across all
+   * sports/leagues
+   */
   globalOpponentId?: number | null;
+  /** The position of this team's D/ST; as listed by DraftKings. */
   draftKingsPosition?: string | null;
+  /** The position of this team's D/ST; as listed by FanDuel. */
   fanDuelPosition?: string | null;
+  /** The position of this team's D/ST; as listed by FantasyDraft */
   fantasyDraftPosition?: string | null;
+  /**
+   * The position of the team's defense/special teams unit, as listed on Yahoo's daily fantasy
+   * sports platform
+   */
   yahooPosition?: string | null;
+  /**
+   * "Unique ID of FantasyDefense record (subject to change; although it very rarely does). Note:
+   * For a guaranteed static ID; use a combination of GameKey and Team"
+   */
   fantasyDefenseId?: number | null;
+  /** Unique ID of the score/game */
   scoreId?: number;
+  /**
+   * FanDuel fantasy points allowed to opposing offensive players in the game. Note: positions
+   * include: QB; RB; WR; TE
+   */
   fanDuelFantasyPointsAllowed?: number | null;
+  /** FanDuel fantasy points allowed by the team to opposing quarterbacks in the game */
   fanDuelQuarterbackFantasyPointsAllowed?: number | null;
+  /** FanDuel fantasy points allowed by the team to opposing running backs in the game */
   fanDuelRunningbackFantasyPointsAllowed?: number | null;
+  /** FanDuel fantasy points allowed by the team to opposing wide receivers in the game */
   fanDuelWideReceiverFantasyPointsAllowed?: number | null;
+  /** FanDuel fantasy points allowed by the team to opposing tight ends in the game */
   fanDuelTightEndFantasyPointsAllowed?: number | null;
+  /** FanDuel fantasy points allowed by the team to opposing kickers in the game */
   fanDuelKickerFantasyPointsAllowed?: number | null;
+  /**
+   * DraftKings fantasy points allowed to opposing offensive players in the game. Note: positions
+   * include: QB; RB; WR; TE
+   */
   draftKingsFantasyPointsAllowed?: number | null;
+  /** DraftKings fantasy points allowed by the team to opponent quarterbacks in the game */
   draftKingsQuarterbackFantasyPointsAllowed?: number | null;
+  /** DraftKings fantasy points allowed by the team to opponent running backs in the game */
   draftKingsRunningbackFantasyPointsAllowed?: number | null;
+  /** DraftKings fantasy points allowed by the team to opponent wide receivers in the game */
   draftKingsWideReceiverFantasyPointsAllowed?: number | null;
+  /** DraftKings fantasy points allowed by the team to opponent tight ends in the game */
   draftKingsTightEndFantasyPointsAllowed?: number | null;
+  /** DraftKings fantasy points allowed to opposing kickers */
   draftKingsKickerFantasyPointsAllowed?: number | null;
+  /**
+   * Total Yahoo fantasy points allowed to opposing offensive players by the team in the game. Note:
+   * Offensive players include: QB, RB, WR, & TE
+   */
   yahooFantasyPointsAllowed?: number | null;
+  /** Total Yahoo fantasy points allowed to opposing quarterbacks by the team in the game */
   yahooQuarterbackFantasyPointsAllowed?: number | null;
+  /** Total Yahoo fantasy points allowed to opposing running backs by the team in the game */
   yahooRunningbackFantasyPointsAllowed?: number | null;
+  /** Total Yahoo fantasy points allowed to opposing wide receivers by the team in the game */
   yahooWideReceiverFantasyPointsAllowed?: number | null;
+  /** Total Yahoo fantasy points allowed to opposing tight ends by the team in the game */
   yahooTightEndFantasyPointsAllowed?: number | null;
+  /** Total Yahoo fantasy points allowed to opposing kickers by the team in the game */
   yahooKickerFantasyPointsAllowed?: number | null;
+  /** Fantasy points based on FantasyDraft's scoring system by the team in the game */
   fantasyPointsFantasyDraft?: number | null;
+  /**
+   * FantasyDraft fantasy points allowed to opposing offensive players in the game. Note: positions
+   * include: QB; RB; WR; TE
+   */
   fantasyDraftFantasyPointsAllowed?: number | null;
+  /** FantasyDraft fantasy points allowed by the team to opposing quarterbacks in the game */
   fantasyDraftQuarterbackFantasyPointsAllowed?: number | null;
+  /** FantasyDraft fantasy points allowed by the team to opposing running backs in the game */
   fantasyDraftRunningbackFantasyPointsAllowed?: number | null;
+  /** FantasyDraft fantasy points allowed by the team to opposing wide receivers in the game */
   fantasyDraftWideReceiverFantasyPointsAllowed?: number | null;
+  /** FantasyDraft fantasy points allowed by the team to opposing tight ends in the game */
   fantasyDraftTightEndFantasyPointsAllowed?: number | null;
+  /** FantasyDraft fantasy points allowed by the team to opposing kickers in the game */
   fantasyDraftKickerFantasyPointsAllowed?: number | null;
+  /** The details of the scoring plays this team DST recorded in the game */
   scoringDetails?: ScoringDetail[];
 };
 
 export const fantasyDefenseGameSchema: Schema<FantasyDefenseGame> = s.object<FantasyDefenseGame>({
   gameKey: s.optionalNullable(s.string()),
-  seasonType: s.optional(s.number()),
-  season: s.optional(s.number()),
-  week: s.optionalNullable(s.number()),
+  seasonType: s.optional(s.int()),
+  season: s.optional(s.int()),
+  week: s.optionalNullable(s.int()),
   date: s.optionalNullable(s.string()),
   team: s.optionalNullable(s.string()),
   opponent: s.optionalNullable(s.string()),
-  pointsAllowed: s.optional(s.number()),
-  touchdownsScored: s.optional(s.number()),
-  soloTackles: s.optional(s.number()),
-  assistedTackles: s.optional(s.number()),
-  sacks: s.optional(s.number()),
-  sackYards: s.optional(s.number()),
-  passesDefended: s.optional(s.number()),
-  fumblesForced: s.optional(s.number()),
-  fumblesRecovered: s.optional(s.number()),
-  fumbleReturnYards: s.optional(s.number()),
-  fumbleReturnTouchdowns: s.optional(s.number()),
-  interceptions: s.optional(s.number()),
-  interceptionReturnYards: s.optional(s.number()),
-  interceptionReturnTouchdowns: s.optional(s.number()),
-  blockedKicks: s.optional(s.number()),
-  safeties: s.optional(s.number()),
-  puntReturns: s.optional(s.number()),
-  puntReturnYards: s.optional(s.number()),
-  puntReturnTouchdowns: s.optional(s.number()),
-  puntReturnLong: s.optional(s.number()),
-  kickReturns: s.optional(s.number()),
-  kickReturnYards: s.optional(s.number()),
-  kickReturnTouchdowns: s.optional(s.number()),
-  kickReturnLong: s.optional(s.number()),
-  blockedKickReturnTouchdowns: s.optionalNullable(s.number()),
-  fieldGoalReturnTouchdowns: s.optionalNullable(s.number()),
-  fantasyPointsAllowed: s.optionalNullable(s.number()),
-  quarterbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  runningbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  wideReceiverFantasyPointsAllowed: s.optionalNullable(s.number()),
-  tightEndFantasyPointsAllowed: s.optionalNullable(s.number()),
-  kickerFantasyPointsAllowed: s.optionalNullable(s.number()),
-  blockedKickReturnYards: s.optionalNullable(s.number()),
-  fieldGoalReturnYards: s.optionalNullable(s.number()),
-  quarterbackHits: s.optionalNullable(s.number()),
-  tacklesForLoss: s.optionalNullable(s.number()),
-  defensiveTouchdowns: s.optionalNullable(s.number()),
-  specialTeamsTouchdowns: s.optionalNullable(s.number()),
+  pointsAllowed: s.optional(s.float64()),
+  touchdownsScored: s.optional(s.float64()),
+  soloTackles: s.optional(s.float64()),
+  assistedTackles: s.optional(s.float64()),
+  sacks: s.optional(s.float64()),
+  sackYards: s.optional(s.float64()),
+  passesDefended: s.optional(s.float64()),
+  fumblesForced: s.optional(s.float64()),
+  fumblesRecovered: s.optional(s.float64()),
+  fumbleReturnYards: s.optional(s.float64()),
+  fumbleReturnTouchdowns: s.optional(s.float64()),
+  interceptions: s.optional(s.float64()),
+  interceptionReturnYards: s.optional(s.float64()),
+  interceptionReturnTouchdowns: s.optional(s.float64()),
+  blockedKicks: s.optional(s.float64()),
+  safeties: s.optional(s.float64()),
+  puntReturns: s.optional(s.float64()),
+  puntReturnYards: s.optional(s.float64()),
+  puntReturnTouchdowns: s.optional(s.float64()),
+  puntReturnLong: s.optional(s.float64()),
+  kickReturns: s.optional(s.float64()),
+  kickReturnYards: s.optional(s.float64()),
+  kickReturnTouchdowns: s.optional(s.float64()),
+  kickReturnLong: s.optional(s.float64()),
+  blockedKickReturnTouchdowns: s.optionalNullable(s.float64()),
+  fieldGoalReturnTouchdowns: s.optionalNullable(s.float64()),
+  fantasyPointsAllowed: s.optionalNullable(s.float64()),
+  quarterbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  runningbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  wideReceiverFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  tightEndFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  kickerFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  blockedKickReturnYards: s.optionalNullable(s.float64()),
+  fieldGoalReturnYards: s.optionalNullable(s.float64()),
+  quarterbackHits: s.optionalNullable(s.float64()),
+  tacklesForLoss: s.optionalNullable(s.float64()),
+  defensiveTouchdowns: s.optionalNullable(s.float64()),
+  specialTeamsTouchdowns: s.optionalNullable(s.float64()),
   isGameOver: s.optionalNullable(s.boolean()),
-  fantasyPoints: s.optionalNullable(s.number()),
+  fantasyPoints: s.optionalNullable(s.float64()),
   stadium: s.optionalNullable(s.string()),
-  temperature: s.optionalNullable(s.number()),
-  humidity: s.optionalNullable(s.number()),
-  windSpeed: s.optionalNullable(s.number()),
-  thirdDownAttempts: s.optionalNullable(s.number()),
-  thirdDownConversions: s.optionalNullable(s.number()),
-  fourthDownAttempts: s.optionalNullable(s.number()),
-  fourthDownConversions: s.optionalNullable(s.number()),
-  pointsAllowedByDefenseSpecialTeams: s.optionalNullable(s.number()),
-  fanDuelSalary: s.optionalNullable(s.number()),
-  draftKingsSalary: s.optionalNullable(s.number()),
-  fantasyDataSalary: s.optionalNullable(s.number()),
-  victivSalary: s.optionalNullable(s.number()),
-  twoPointConversionReturns: s.optionalNullable(s.number()),
-  fantasyPointsFanDuel: s.optionalNullable(s.number()),
-  fantasyPointsDraftKings: s.optionalNullable(s.number()),
-  offensiveYardsAllowed: s.optionalNullable(s.number()),
-  yahooSalary: s.optionalNullable(s.number()),
-  playerId: s.optionalNullable(s.number()),
-  fantasyPointsYahoo: s.optionalNullable(s.number()),
+  temperature: s.optionalNullable(s.int()),
+  humidity: s.optionalNullable(s.int()),
+  windSpeed: s.optionalNullable(s.int()),
+  thirdDownAttempts: s.optionalNullable(s.float64()),
+  thirdDownConversions: s.optionalNullable(s.float64()),
+  fourthDownAttempts: s.optionalNullable(s.float64()),
+  fourthDownConversions: s.optionalNullable(s.float64()),
+  pointsAllowedByDefenseSpecialTeams: s.optionalNullable(s.float64()),
+  fanDuelSalary: s.optionalNullable(s.int()),
+  draftKingsSalary: s.optionalNullable(s.int()),
+  fantasyDataSalary: s.optionalNullable(s.int()),
+  victivSalary: s.optionalNullable(s.int()),
+  twoPointConversionReturns: s.optionalNullable(s.float64()),
+  fantasyPointsFanDuel: s.optionalNullable(s.float64()),
+  fantasyPointsDraftKings: s.optionalNullable(s.float64()),
+  offensiveYardsAllowed: s.optionalNullable(s.float64()),
+  yahooSalary: s.optionalNullable(s.int()),
+  playerId: s.optionalNullable(s.int()),
+  fantasyPointsYahoo: s.optionalNullable(s.float64()),
   homeOrAway: s.optionalNullable(s.string()),
-  opponentRank: s.optionalNullable(s.number()),
-  opponentPositionRank: s.optionalNullable(s.number()),
-  fantasyDraftSalary: s.optionalNullable(s.number()),
-  teamId: s.optionalNullable(s.number()),
-  opponentId: s.optionalNullable(s.number()),
+  opponentRank: s.optionalNullable(s.int()),
+  opponentPositionRank: s.optionalNullable(s.int()),
+  fantasyDraftSalary: s.optionalNullable(s.int()),
+  teamId: s.optionalNullable(s.int()),
+  opponentId: s.optionalNullable(s.int()),
   day: s.optionalNullable(s.string()),
   dateTime: s.optionalNullable(s.string()),
-  globalGameId: s.optionalNullable(s.number()),
-  globalTeamId: s.optionalNullable(s.number()),
-  globalOpponentId: s.optionalNullable(s.number()),
+  globalGameId: s.optionalNullable(s.int()),
+  globalTeamId: s.optionalNullable(s.int()),
+  globalOpponentId: s.optionalNullable(s.int()),
   draftKingsPosition: s.optionalNullable(s.string()),
   fanDuelPosition: s.optionalNullable(s.string()),
   fantasyDraftPosition: s.optionalNullable(s.string()),
   yahooPosition: s.optionalNullable(s.string()),
-  fantasyDefenseId: s.optionalNullable(s.number()),
-  scoreId: s.optional(s.number()),
-  fanDuelFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fanDuelQuarterbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fanDuelRunningbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fanDuelWideReceiverFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fanDuelTightEndFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fanDuelKickerFantasyPointsAllowed: s.optionalNullable(s.number()),
-  draftKingsFantasyPointsAllowed: s.optionalNullable(s.number()),
-  draftKingsQuarterbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  draftKingsRunningbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  draftKingsWideReceiverFantasyPointsAllowed: s.optionalNullable(s.number()),
-  draftKingsTightEndFantasyPointsAllowed: s.optionalNullable(s.number()),
-  draftKingsKickerFantasyPointsAllowed: s.optionalNullable(s.number()),
-  yahooFantasyPointsAllowed: s.optionalNullable(s.number()),
-  yahooQuarterbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  yahooRunningbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  yahooWideReceiverFantasyPointsAllowed: s.optionalNullable(s.number()),
-  yahooTightEndFantasyPointsAllowed: s.optionalNullable(s.number()),
-  yahooKickerFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fantasyPointsFantasyDraft: s.optionalNullable(s.number()),
-  fantasyDraftFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fantasyDraftQuarterbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fantasyDraftRunningbackFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fantasyDraftWideReceiverFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fantasyDraftTightEndFantasyPointsAllowed: s.optionalNullable(s.number()),
-  fantasyDraftKickerFantasyPointsAllowed: s.optionalNullable(s.number()),
+  fantasyDefenseId: s.optionalNullable(s.int()),
+  scoreId: s.optional(s.int()),
+  fanDuelFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fanDuelQuarterbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fanDuelRunningbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fanDuelWideReceiverFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fanDuelTightEndFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fanDuelKickerFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  draftKingsFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  draftKingsQuarterbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  draftKingsRunningbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  draftKingsWideReceiverFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  draftKingsTightEndFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  draftKingsKickerFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  yahooFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  yahooQuarterbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  yahooRunningbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  yahooWideReceiverFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  yahooTightEndFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  yahooKickerFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fantasyPointsFantasyDraft: s.optionalNullable(s.float64()),
+  fantasyDraftFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fantasyDraftQuarterbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fantasyDraftRunningbackFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fantasyDraftWideReceiverFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fantasyDraftTightEndFantasyPointsAllowed: s.optionalNullable(s.float64()),
+  fantasyDraftKickerFantasyPointsAllowed: s.optionalNullable(s.float64()),
   scoringDetails: s.optional(s.array(s.lazy(() => scoringDetailSchema))),
   _keysMap: {
     gameKey: "GameKey",

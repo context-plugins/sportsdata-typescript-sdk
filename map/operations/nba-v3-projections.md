@@ -4,7 +4,7 @@
 
 Accessor: `client.nbaV3Projections` · Source: `src/resources/nba-v3-projections.ts` · 6 operations · Request and error types: namespace `NbaV3Projections`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nbaV3ProjectionsDfsSlatesByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.nbaV3Projections` · Source: `src/resources/nba-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Projections.NbaV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Projections.NbaV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Projections.NbaV3ProjectionsDfsSlatesByDateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.nbaV3Projections` · Source: `src/resources/nba-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Projections.NbaV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Projections.NbaV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Projections.NbaV3ProjectionsPlayerDetailsByInjuredRequest` (1):
@@ -58,7 +58,7 @@ Accessor: `client.nbaV3Projections` · Source: `src/resources/nba-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Projections.NbaV3ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Projections.NbaV3ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Projections.NbaV3ProjectionsProjectedPlayerGameStatsByDateRequest` (2):
@@ -81,7 +81,7 @@ Accessor: `client.nbaV3Projections` · Source: `src/resources/nba-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeasonProjection1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Projections.NbaV3ProjectionsProjectedPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Projections.NbaV3ProjectionsProjectedPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Projections.NbaV3ProjectionsProjectedPlayerSeasonStatsRequest` (2):
@@ -104,7 +104,7 @@ Accessor: `client.nbaV3Projections` · Source: `src/resources/nba-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeasonProjection1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Projections.NbaV3ProjectionsProjectedPlayerSeasonStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Projections.NbaV3ProjectionsProjectedPlayerSeasonStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Projections.NbaV3ProjectionsProjectedPlayerSeasonStatsByTeamRequest` (3):
@@ -128,7 +128,7 @@ Accessor: `client.nbaV3Projections` · Source: `src/resources/nba-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `StartingLineups[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Projections.NbaV3ProjectionsStartingLineupsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Projections.NbaV3ProjectionsStartingLineupsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Projections.NbaV3ProjectionsStartingLineupsByDateRequest` (2):

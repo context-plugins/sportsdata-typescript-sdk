@@ -4,7 +4,7 @@
 
 Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts` · 21 operations · Request and error types: namespace `SoccerV4Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### soccerV4ScoresAreasCountries
 
@@ -13,7 +13,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Area[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresAreasCountriesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresAreasCountriesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresAreasCountriesRequest` (1):
@@ -35,7 +35,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Competition[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresCompetitionsLeaguesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresCompetitionsLeaguesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresCompetitionsLeaguesRequest` (1):
@@ -57,7 +57,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `CompetitionDetail`
-- **Error**: `SoccerV4Scores.SoccerV4ScoresGamesByCompetitionLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresGamesByCompetitionLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresGamesByCompetitionLiveFinalRequest` (2):
@@ -80,7 +80,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game17[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresGamesByDateFinalRequest` (3):
@@ -104,7 +104,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game17[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresGamesByDateLiveFinalRequest` (3):
@@ -128,7 +128,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresGamesBasicByDateFinalRequest` (3):
@@ -152,7 +152,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresGamesBasicByDateLiveFinalRequest` (3):
@@ -176,7 +176,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Membership[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresMembershipsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresMembershipsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresMembershipsByActiveRequest` (2):
@@ -199,7 +199,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `CanceledMembership`
-- **Error**: `SoccerV4Scores.SoccerV4ScoresMembershipsByCanceledError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresMembershipsByCanceledError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresMembershipsByCanceledRequest` (1):
@@ -221,7 +221,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Membership[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresMembershipsByRecentlyChangedError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresMembershipsByRecentlyChangedError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresMembershipsByRecentlyChangedRequest` (3):
@@ -245,7 +245,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Membership[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresMembershipsHistoricalByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresMembershipsHistoricalByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresMembershipsHistoricalByTeamRequest` (3):
@@ -269,7 +269,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresPlayerDetailsByTeamRequest` (3):
@@ -293,7 +293,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresPlayerProfilesByTeamRequest` (3):
@@ -317,7 +317,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Round[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresSchedulesRequest` (3):
@@ -341,7 +341,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScheduleBasic7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresSchedulesBasicRequest` (3):
@@ -365,7 +365,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Round[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresStandingsRequest` (3):
@@ -389,7 +389,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresTeamGameStatsByDateLiveFinalRequest` (3):
@@ -413,7 +413,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team8[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresTeamProfilesByCompetitionError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresTeamProfilesByCompetitionError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresTeamProfilesByCompetitionRequest` (2):
@@ -436,7 +436,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `SeasonTeam[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresTeamProfilesBySeasonRequest` (3):
@@ -460,7 +460,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Round[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresTeamSeasonStatsRequest` (3):
@@ -484,7 +484,7 @@ Accessor: `client.soccerV4Scores` · Source: `src/resources/soccer-v4-scores.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Venue[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Scores.SoccerV4ScoresVenuesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Scores.SoccerV4ScoresVenuesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Scores.SoccerV4ScoresVenuesRequest` (1):

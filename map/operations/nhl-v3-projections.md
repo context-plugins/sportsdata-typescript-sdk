@@ -4,7 +4,7 @@
 
 Accessor: `client.nhlV3Projections` · Source: `src/resources/nhl-v3-projections.ts` · 4 operations · Request and error types: namespace `NhlV3Projections`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nhlV3ProjectionsDfsSlatesByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.nhlV3Projections` · Source: `src/resources/nhl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Projections.NhlV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Projections.NhlV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Projections.NhlV3ProjectionsDfsSlatesByDateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.nhlV3Projections` · Source: `src/resources/nhl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Projections.NhlV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Projections.NhlV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Projections.NhlV3ProjectionsPlayerDetailsByInjuredRequest` (1):
@@ -58,7 +58,7 @@ Accessor: `client.nhlV3Projections` · Source: `src/resources/nhl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Projections.NhlV3ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Projections.NhlV3ProjectionsProjectedPlayerGameStatsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Projections.NhlV3ProjectionsProjectedPlayerGameStatsByDateRequest` (2):
@@ -81,7 +81,7 @@ Accessor: `client.nhlV3Projections` · Source: `src/resources/nhl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `StartingGoaltenders[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Projections.NhlV3ProjectionsStartingGoaltendersByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Projections.NhlV3ProjectionsStartingGoaltendersByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Projections.NhlV3ProjectionsStartingGoaltendersByDateRequest` (2):

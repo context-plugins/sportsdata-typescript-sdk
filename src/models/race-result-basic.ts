@@ -4,7 +4,15 @@ import { driverRaceBasicSchema, type DriverRaceBasic } from "./driver-race-basic
 import { raceBasic2Schema, type RaceBasic2 } from "./race-basic2.js";
 
 export type RaceResultBasic = {
+  /**
+   * RaceBasic object (Includes basic information such as RaceID, Day, DateTime, Updated, and
+   * Created)
+   */
   race?: RaceBasic2;
+  /**
+   * StatBasic object (includes basic information on the drivers race performance such as DriveID,
+   * Season, Driver's Name, Start and Final positions, Lap information, etc.)
+   */
   driverRaces?: DriverRaceBasic[];
 };
 

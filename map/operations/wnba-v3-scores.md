@@ -4,7 +4,7 @@
 
 Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 40 operations · Request and error types: namespace `WnbaV3Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### wnbaV3ScoresAreGamesInProgress
 
@@ -13,7 +13,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `boolean` — a bare `application/json` boolean; the success type *is* the boolean
-- **Error**: `WnbaV3Scores.WnbaV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresAreGamesInProgressRequest` (1):
@@ -34,7 +34,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingEventsByDateRequest` (2):
@@ -57,7 +57,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingEventsBySeasonRequest` (2):
@@ -80,7 +80,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingFuturesBySeasonRequest` (2):
@@ -103,7 +103,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingFuturesBySeasonSportsbookGroupRequest` (3):
@@ -127,7 +127,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketRequest` (2):
@@ -150,7 +150,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketSportsbookGroupRequest` (3):
@@ -174,7 +174,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketsByEventRequest` (2):
@@ -197,7 +197,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketsByEventSportsbookGroupRequest` (3):
@@ -221,7 +221,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketsByGameRequest` (2):
@@ -244,7 +244,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketsByGameSportsbookGroupRequest` (3):
@@ -268,7 +268,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketsByMarketTypeRequest` (3):
@@ -292,7 +292,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMarketsByMarketTypeSportsbookGroupRequest` (4):
@@ -317,7 +317,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection`
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingMetadataRequest` (1):
@@ -339,7 +339,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingPlayerPropsByGameRequest` (2):
@@ -362,7 +362,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBettingPlayerPropsByGameSportsbookGroupRequest` (3):
@@ -386,7 +386,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore5`
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBoxScoreFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBoxScoreFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBoxScoreFinalRequest` (2):
@@ -409,7 +409,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore5`
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBoxScoreLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBoxScoreLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBoxScoreLiveFinalRequest` (2):
@@ -432,7 +432,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBoxScoresByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBoxScoresByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBoxScoresByDateFinalRequest` (2):
@@ -455,7 +455,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BoxScore5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresBoxScoresByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresBoxScoresByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresBoxScoresByDateLiveFinalRequest` (2):
@@ -478,7 +478,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game10[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresGamesByDateFinalRequest` (2):
@@ -501,7 +501,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game10[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresGamesByDateLiveFinalRequest` (2):
@@ -524,7 +524,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresGamesBasicByDateFinalRequest` (2):
@@ -547,7 +547,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresGamesBasicByDateLiveFinalRequest` (2):
@@ -570,7 +570,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresPlayerDetailsByActiveRequest` (1):
@@ -592,7 +592,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresPlayerDetailsByTeamRequest` (2):
@@ -615,7 +615,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresPlayerSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresPlayerSeasonStatsRequest` (2):
@@ -638,7 +638,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeason7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresPlayerSeasonStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresPlayerSeasonStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresPlayerSeasonStatsByTeamRequest` (3):
@@ -662,7 +662,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresPreGameOddsByDateRequest` (2):
@@ -685,7 +685,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresPreGameOddsLineMovementRequest` (2):
@@ -708,7 +708,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game10[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresSchedulesRequest` (2):
@@ -731,7 +731,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `SchedulesBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresSchedulesBasicRequest` (2):
@@ -754,7 +754,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Season4`
-- **Error**: `WnbaV3Scores.WnbaV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresSeasonCurrentRequest` (1):
@@ -776,7 +776,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresSportsbooksByActiveRequest` (1):
@@ -798,7 +798,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Stadium6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresStadiumsRequest` (1):
@@ -820,7 +820,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `undefined` — the operation resolves to nothing
-- **Error**: `WnbaV3Scores.WnbaV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresStandingsRequest` (2):
@@ -842,7 +842,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresTeamGameStatsByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresTeamGameStatsByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresTeamGameStatsByDateFinalRequest` (2):
@@ -865,7 +865,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresTeamGameStatsByDateLiveFinalRequest` (2):
@@ -888,7 +888,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresTeamProfilesAllRequest` (1):
@@ -910,7 +910,7 @@ Accessor: `client.wnbaV3Scores` · Source: `src/resources/wnba-v3-scores.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamSeason6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `WnbaV3Scores.WnbaV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `WnbaV3Scores.WnbaV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `WnbaV3Scores.WnbaV3ScoresTeamSeasonStatsRequest` (2):

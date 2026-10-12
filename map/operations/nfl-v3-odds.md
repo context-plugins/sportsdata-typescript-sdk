@@ -4,7 +4,7 @@
 
 Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 operations · Request and error types: namespace `NflV3Odds`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nflV3OddsBettingEventsByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingEventsByDateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingEventsBySeasonRequest` (2):
@@ -59,7 +59,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingFuturesBySeasonRequest` (2):
@@ -82,7 +82,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingFuturesBySeasonSportsbookGroupRequest` (3):
@@ -106,7 +106,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketRequest` (2):
@@ -129,7 +129,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketSportsbookGroupRequest` (3):
@@ -153,7 +153,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketsByEventRequest` (3):
@@ -178,7 +178,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketsByEventSportsbookGroupRequest` (4):
@@ -204,7 +204,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketsByGameRequest` (3):
@@ -229,7 +229,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketsByGameSportsbookGroupRequest` (4):
@@ -255,7 +255,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketsByMarketTypeRequest` (4):
@@ -281,7 +281,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMarketsByMarketTypeSportsbookGroupRequest` (5):
@@ -308,7 +308,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection`
-- **Error**: `NflV3Odds.NflV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingMetadataRequest` (1):
@@ -330,7 +330,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingPlayerPropsByGameRequest` (3):
@@ -355,7 +355,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingPlayerPropsByGameSportsbookGroupRequest` (4):
@@ -381,7 +381,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketResult`
-- **Error**: `NflV3Odds.NflV3OddsBettingResultsByMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingResultsByMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingResultsByMarketRequest` (2):
@@ -404,7 +404,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketResult`
-- **Error**: `NflV3Odds.NflV3OddsBettingResultsByMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingResultsByMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingResultsByMarketSportsbookGroupRequest` (3):
@@ -428,7 +428,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketSplit`
-- **Error**: `NflV3Odds.NflV3OddsBettingSplitsByBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingSplitsByBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingSplitsByBettingMarketRequest` (2):
@@ -451,7 +451,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameBettingSplit`
-- **Error**: `NflV3Odds.NflV3OddsBettingSplitsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingSplitsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingSplitsByGameRequest` (2):
@@ -474,7 +474,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `MatchupTrends`
-- **Error**: `NflV3Odds.NflV3OddsBettingTrendsByMatchupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingTrendsByMatchupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingTrendsByMatchupRequest` (3):
@@ -498,7 +498,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamTrends`
-- **Error**: `NflV3Odds.NflV3OddsBettingTrendsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsBettingTrendsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsBettingTrendsByTeamRequest` (2):
@@ -521,7 +521,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsInGameOddsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsInGameOddsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsInGameOddsByWeekRequest` (3):
@@ -545,7 +545,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsInGameOddsByWeekSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsInGameOddsByWeekSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsInGameOddsByWeekSportsbookGroupRequest` (4):
@@ -570,7 +570,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsInGameOddsLineMovementRequest` (2):
@@ -593,7 +593,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsInGameOddsLineMovementSportsbookGroupRequest` (3):
@@ -617,7 +617,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsInGameOddsLineMovementWithResultingSportsbookGroupRequest` (3):
@@ -641,7 +641,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsPeriodGameOddsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsPeriodGameOddsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsPeriodGameOddsByWeekRequest` (3):
@@ -665,7 +665,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsPeriodGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsPeriodGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsPeriodGameOddsLineMovementRequest` (2):
@@ -688,7 +688,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsByWeekSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsByWeekSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsByWeekSportsbookGroupRequest` (4):
@@ -713,7 +713,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupRequest` (3):
@@ -737,7 +737,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupRequest` (3):
@@ -761,7 +761,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsPreGameOddsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsPreGameOddsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsPreGameOddsByWeekRequest` (3):
@@ -785,7 +785,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsPreGameOddsLineMovementRequest` (2):
@@ -808,7 +808,7 @@ Accessor: `client.nflV3Odds` · Source: `src/resources/nfl-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Odds.NflV3OddsSportsbooksActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Odds.NflV3OddsSportsbooksActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Odds.NflV3OddsSportsbooksActiveRequest` (1):

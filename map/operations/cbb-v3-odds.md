@@ -4,7 +4,7 @@
 
 Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 operations · Request and error types: namespace `CbbV3Odds`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### cbbV3OddsAlternateMarketPreGameOddsByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsAlternateMarketPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsAlternateMarketPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsAlternateMarketPreGameOddsByDateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsAlternateMarketPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsAlternateMarketPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsAlternateMarketPreGameOddsLineMovementRequest` (2):
@@ -59,7 +59,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingEventsByDateRequest` (2):
@@ -82,7 +82,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingEventsBySeasonRequest` (2):
@@ -105,7 +105,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingFuturesBySeasonRequest` (2):
@@ -128,7 +128,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingFuturesBySeasonSportsbookGroupRequest` (3):
@@ -152,7 +152,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketRequest` (2):
@@ -175,7 +175,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketSportsbookGroupRequest` (3):
@@ -199,7 +199,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketsByEventRequest` (3):
@@ -224,7 +224,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketsByEventSportsbookGroupRequest` (4):
@@ -250,7 +250,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketsByGameRequest` (3):
@@ -275,7 +275,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketsByGameSportsbookGroupRequest` (4):
@@ -301,7 +301,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketsByMarketTypeRequest` (4):
@@ -327,7 +327,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMarketsByMarketTypeSportsbookGroupRequest` (5):
@@ -354,7 +354,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingMetadataRequest` (1):
@@ -376,7 +376,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingPlayerPropsByGameRequest` (3):
@@ -401,7 +401,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingPlayerPropsByGameSportsbookGroupRequest` (4):
@@ -427,7 +427,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketResult`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingResultsByMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingResultsByMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingResultsByMarketRequest` (2):
@@ -450,7 +450,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketResult`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingResultsByMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingResultsByMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingResultsByMarketSportsbookGroupRequest` (3):
@@ -474,7 +474,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarketSplit`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingSplitsByBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingSplitsByBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingSplitsByBettingMarketRequest` (2):
@@ -497,7 +497,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameBettingSplit1`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingSplitsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingSplitsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingSplitsByGameRequest` (2):
@@ -520,7 +520,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `MatchupTrends5`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingTrendsByMatchupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingTrendsByMatchupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingTrendsByMatchupRequest` (3):
@@ -544,7 +544,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamTrends3`
-- **Error**: `CbbV3Odds.CbbV3OddsBettingTrendsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsBettingTrendsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsBettingTrendsByTeamRequest` (2):
@@ -567,7 +567,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsInGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsInGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsInGameOddsByDateRequest` (2):
@@ -590,7 +590,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsInGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsInGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsInGameOddsByDateSportsbookGroupRequest` (3):
@@ -614,7 +614,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsInGameOddsLineMovementRequest` (2):
@@ -637,7 +637,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsInGameOddsLineMovementSportsbookGroupRequest` (3):
@@ -661,7 +661,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsInGameOddsLineMovementWithResultingSportsbookGroupRequest` (3):
@@ -685,7 +685,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsByDateSportsbookGroupRequest` (3):
@@ -709,7 +709,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupRequest` (3):
@@ -733,7 +733,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupRequest` (3):
@@ -757,7 +757,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsPreGameOddsByDateRequest` (2):
@@ -780,7 +780,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsPreGameOddsLineMovementRequest` (2):
@@ -803,7 +803,7 @@ Accessor: `client.cbbV3Odds` · Source: `src/resources/cbb-v3-odds.ts` · 34 ope
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Odds.CbbV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Odds.CbbV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Odds.CbbV3OddsSportsbooksByActiveRequest` (1):

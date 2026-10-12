@@ -6,9 +6,13 @@ import { quarter1Schema, type Quarter1 } from "./quarter1.js";
 import { teamGame6Schema, type TeamGame6 } from "./team-game6.js";
 
 export type BoxScore5 = {
+  /** Returns the game details for a given game's box score */
   game?: Game15;
+  /** The details of the quarters (including overtime periods) for this game. */
   quarters?: Quarter1[];
+  /** The team game stats associated with this box score */
   teamGames?: TeamGame6[];
+  /** The player game stats associated with this box score */
   playerGames?: PlayerGame6[];
 };
 

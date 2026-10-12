@@ -4,7 +4,7 @@
 
 Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 operations · Request and error types: namespace `GolfV3Odds`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### golfV3OddsBettingEventsByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingEventsByDateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingEventsBySeasonRequest` (2):
@@ -59,7 +59,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2`
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketRequest` (2):
@@ -82,7 +82,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2`
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketSportsbookGroupRequest` (3):
@@ -106,7 +106,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketsByEventRequest` (3):
@@ -131,7 +131,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketsByEventSportsbookGroupRequest` (4):
@@ -157,7 +157,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketsByMarketTypeRequest` (4):
@@ -183,7 +183,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketsByMarketTypeSportsbookGroupRequest` (5):
@@ -210,7 +210,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketsByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketsByTournamentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketsByTournamentRequest` (3):
@@ -235,7 +235,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMarketsByTournamentSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMarketsByTournamentSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMarketsByTournamentSportsbookGroupRequest` (4):
@@ -261,7 +261,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection2`
-- **Error**: `GolfV3Odds.GolfV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingMetadataRequest` (1):
@@ -283,7 +283,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsBettingPlayerPropsByTournamentSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsBettingPlayerPropsByTournamentSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsBettingPlayerPropsByTournamentSportsbookGroupRequest` (4):
@@ -309,7 +309,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsInPlayTournamentOddsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsInPlayTournamentOddsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsInPlayTournamentOddsRequest` (2):
@@ -332,7 +332,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsInPlayTournamentOddsSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsInPlayTournamentOddsSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsInPlayTournamentOddsSportsbookGroupRequest` (3):
@@ -356,7 +356,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsInPlayTournamentOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsInPlayTournamentOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsInPlayTournamentOddsLineMovementRequest` (2):
@@ -379,7 +379,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsInPlayTournamentOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsInPlayTournamentOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsInPlayTournamentOddsLineMovementSportsbookGroupRequest` (3):
@@ -403,7 +403,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `GolfV3Odds.GolfV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsSportsbooksByActiveRequest` (1):
@@ -425,7 +425,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsTournamentOddsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsTournamentOddsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsTournamentOddsRequest` (2):
@@ -448,7 +448,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsTournamentOddsSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsTournamentOddsSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsTournamentOddsSportsbookGroupRequest` (3):
@@ -472,7 +472,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsTournamentOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsTournamentOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsTournamentOddsLineMovementRequest` (2):
@@ -495,7 +495,7 @@ Accessor: `client.golfV3Odds` · Source: `src/resources/golf-v3-odds.ts` · 21 o
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TournamentOdds`
-- **Error**: `GolfV3Odds.GolfV3OddsTournamentOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `GolfV3Odds.GolfV3OddsTournamentOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `GolfV3Odds.GolfV3OddsTournamentOddsLineMovementSportsbookGroupRequest` (3):

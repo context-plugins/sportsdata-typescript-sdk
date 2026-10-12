@@ -4,7 +4,7 @@
 
 Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 28 operations · Request and error types: namespace `SoccerV4Odds`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### soccerV4OddsBettingEventsByDate
 
@@ -13,7 +13,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingEventsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingEventsByDateRequest` (3):
@@ -37,7 +37,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingEventsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingEventsBySeasonRequest` (3):
@@ -61,7 +61,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingFuturesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingFuturesBySeasonRequest` (3):
@@ -85,7 +85,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEvent3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingFuturesBySeasonSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingFuturesBySeasonSportsbookGroupRequest` (4):
@@ -110,7 +110,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1`
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketRequest` (3):
@@ -134,7 +134,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1`
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketSportsbookGroupRequest` (4):
@@ -159,7 +159,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketsByEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketsByEventRequest` (3):
@@ -183,7 +183,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketsByEventSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketsByEventSportsbookGroupRequest` (4):
@@ -208,7 +208,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketsByGameRequest` (3):
@@ -232,7 +232,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketsByGameSportsbookGroupRequest` (4):
@@ -257,7 +257,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketsByMarketTypeError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketsByMarketTypeRequest` (4):
@@ -282,7 +282,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMarketsByMarketTypeSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMarketsByMarketTypeSportsbookGroupRequest` (5):
@@ -308,7 +308,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingEntityMetadataCollection1`
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingMetadataError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingMetadataRequest` (1):
@@ -330,7 +330,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingPlayerPropsByGameError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingPlayerPropsByGameRequest` (3):
@@ -354,7 +354,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `BettingMarket1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsBettingPlayerPropsByGameSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsBettingPlayerPropsByGameSportsbookGroupRequest` (4):
@@ -379,7 +379,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsInGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsInGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsInGameOddsByDateRequest` (3):
@@ -403,7 +403,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsInGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsInGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsInGameOddsByDateSportsbookGroupRequest` (4):
@@ -428,7 +428,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementRequest` (3):
@@ -452,7 +452,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementSportsbookGroupRequest` (4):
@@ -477,7 +477,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsInGameOddsLineMovementWithResultingSportsbookGroupRequest` (4):
@@ -502,7 +502,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsPeriodGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsPeriodGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsPeriodGameOddsByDateRequest` (3):
@@ -526,7 +526,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsPeriodGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsPeriodGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsPeriodGameOddsLineMovementRequest` (3):
@@ -550,7 +550,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsByDateSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsByDateSportsbookGroupRequest` (4):
@@ -575,7 +575,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsLineMovementSportsbookGroupRequest` (4):
@@ -600,7 +600,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfoResult6[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsPreGameAndPeriodGameOddsLineMovementWithResultingSportsbookGroupRequest` (4):
@@ -625,7 +625,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsPreGameOddsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsPreGameOddsByDateRequest` (3):
@@ -649,7 +649,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `GameInfo7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsPreGameOddsLineMovementError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsPreGameOddsLineMovementRequest` (3):
@@ -673,7 +673,7 @@ Accessor: `client.soccerV4Odds` · Source: `src/resources/soccer-v4-odds.ts` · 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Sportsbook[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `SoccerV4Odds.SoccerV4OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `SoccerV4Odds.SoccerV4OddsSportsbooksByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `SoccerV4Odds.SoccerV4OddsSportsbooksByActiveRequest` (1):

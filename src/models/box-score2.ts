@@ -7,10 +7,15 @@ import { playerGame3Schema, type PlayerGame3 } from "./player-game3.js";
 import { teamGame3Schema, type TeamGame3 } from "./team-game3.js";
 
 export type BoxScore2 = {
+  /** The details of the game associated with this box score */
   game?: Game42;
+  /** The details of the periods associated with this box score */
   periods?: Period[];
+  /** The team game stats associated with this box score */
   teamGames?: TeamGame3[];
+  /** The player game stats associated with this box score */
   playerGames?: PlayerGame3[];
+  /** The details of any shootout plays associated with this box score */
   shootoutPlays?: Play3[];
 };
 

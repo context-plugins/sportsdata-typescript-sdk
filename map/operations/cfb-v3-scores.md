@@ -4,7 +4,7 @@
 
 Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26 operations · Request and error types: namespace `CfbV3Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### cfbV3ScoresAreGamesInProgress
 
@@ -13,7 +13,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `boolean` — a bare `application/json` boolean; the success type *is* the boolean
-- **Error**: `CfbV3Scores.CfbV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresAreGamesInProgressRequest` (1):
@@ -34,7 +34,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Conference[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresConferenceHierarchyError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresConferenceHierarchyError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresConferenceHierarchyRequest` (1):
@@ -56,7 +56,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game8[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresGamesByDateLiveFinalRequest` (2):
@@ -79,7 +79,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game8[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresGamesByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresGamesByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresGamesByWeekFinalRequest` (3):
@@ -103,7 +103,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game8[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresGamesByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresGamesByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresGamesByWeekLiveFinalRequest` (3):
@@ -127,7 +127,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresGamesBasicByDateLiveFinalRequest` (2):
@@ -150,7 +150,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresGamesBasicByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresGamesBasicByWeekFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresGamesBasicByWeekFinalRequest` (3):
@@ -174,7 +174,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresGamesBasicByDateFinalRequest` (2):
@@ -197,7 +197,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game8[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresGamesByDateFinalRequest` (2):
@@ -220,7 +220,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresPlayerDetailsByActiveRequest` (1):
@@ -242,7 +242,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresPlayerDetailsByActive2Error` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresPlayerDetailsByActive2Error` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresPlayerDetailsByActive2Request` (1):
@@ -264,7 +264,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresPlayerDetailsByInjuredRequest` (1):
@@ -286,7 +286,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresPlayerDetailsByTeamRequest` (2):
@@ -309,7 +309,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresPlayerProfilesByTeamRequest` (2):
@@ -332,7 +332,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game8[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresSchedulesRequest` (2):
@@ -355,7 +355,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScheduleBasic4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresSchedulesBasicRequest` (2):
@@ -378,7 +378,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `CfbV3Scores.CfbV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresSeasonCurrentRequest` (1):
@@ -399,7 +399,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Season2`
-- **Error**: `CfbV3Scores.CfbV3ScoresSeasonCurrentDetailsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresSeasonCurrentDetailsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresSeasonCurrentDetailsRequest` (1):
@@ -421,7 +421,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `string` — a bare `application/json` string; the success type *is* the string
-- **Error**: `CfbV3Scores.CfbV3ScoresSeasonTypeCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresSeasonTypeCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresSeasonTypeCurrentRequest` (1):
@@ -442,7 +442,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Stadium5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresStadiumsRequest` (1):
@@ -464,7 +464,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresTeamGameLogsBySeasonRequest` (4):
@@ -489,7 +489,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresTeamGameStatsByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresTeamGameStatsByWeekLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresTeamGameStatsByWeekLiveFinalRequest` (3):
@@ -513,7 +513,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresTeamProfilesAllRequest` (1):
@@ -535,7 +535,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamSeason4[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresTeamSeasonStatsStandingsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresTeamSeasonStatsStandingsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresTeamSeasonStatsStandingsRequest` (2):
@@ -558,7 +558,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamBasic1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CfbV3Scores.CfbV3ScoresTeamsBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresTeamsBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresTeamsBasicAllRequest` (1):
@@ -580,7 +580,7 @@ Accessor: `client.cfbV3Scores` · Source: `src/resources/cfb-v3-scores.ts` · 26
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `number` — a bare `application/json` number; the success type *is* the number
-- **Error**: `CfbV3Scores.CfbV3ScoresWeekCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CfbV3Scores.CfbV3ScoresWeekCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CfbV3Scores.CfbV3ScoresWeekCurrentRequest` (1):

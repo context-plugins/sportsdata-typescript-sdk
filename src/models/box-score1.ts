@@ -6,9 +6,13 @@ import { playerGame2Schema, type PlayerGame2 } from "./player-game2.js";
 import { teamGame2Schema, type TeamGame2 } from "./team-game2.js";
 
 export type BoxScore1 = {
+  /** The details of the game associated with this box score */
   game?: Game41;
+  /** The inning details associated with the box score */
   innings?: Inning[];
+  /** The team game stats associated with this box score */
   teamGames?: TeamGame2[];
+  /** The player game stats associated with this box score */
   playerGames?: PlayerGame2[];
 };
 

@@ -1,9 +1,9 @@
 import type { AuthSchemes } from "../auth-schemes.js";
+import { ApiError, type Declared, type ErrorDecoders, type ErrorPayload } from "../core/api-error.js";
 import type { ApiPromise } from "../core/api-promise.js";
 import type { RequestOptions } from "../core/api-request.js";
 import { anyAuth } from "../core/auth/schemes.js";
 import type { RawClient } from "../core/raw-client.js";
-import { ResponseError, type Declared, type ErrorDecoders } from "../core/response-error.js";
 import * as s from "../core/validation/index.js";
 import {
   dfsSlateWithOwnershipProjectionSchema,
@@ -36,6 +36,21 @@ export class MlbV3Projections {
     this.#auth = auth;
   }
 
+  /**
+   * Depth Charts
+   *
+   * @remarks
+   * Returns Depth Charts for all active MLB teams.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsDepthChartsError} when the API answers with an
+   * error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsDepthCharts(
     request: MlbV3Projections.MlbV3ProjectionsDepthChartsRequest,
     options?: RequestOptions,
@@ -43,11 +58,13 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mlb/projections/{format}/DepthCharts"),
+        urlTemplate: this.#servers.default("/v3/mlb/projections/{format}/DepthCharts"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -58,6 +75,23 @@ export class MlbV3Projections {
     );
   }
 
+  /**
+   * DFS Slate Ownership Projections - by Slate
+   *
+   * @remarks
+   * Slate Ownership Projections for a specific slate. Projections are for Guaranteed Prize Pool
+   * (GPP) format ownership. Will return an empty list if the slate is not yet projected or not a
+   * slate we have projections for.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateError} when
+   * the API answers with an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsDfsSlateOwnershipProjectionsBySlate(
     request: MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateRequest,
     options?: RequestOptions,
@@ -68,14 +102,16 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default(
+        urlTemplate: this.#servers.default(
           "/v3/mlb/projections/{format}/DfsSlateOwnershipProjectionsBySlateID/{slateId}",
         ),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
-          { name: "slateId", value: request.slateId, schema: s.number() },
+          { name: "slateId", value: request.slateId, schema: s.int() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -86,6 +122,21 @@ export class MlbV3Projections {
     );
   }
 
+  /**
+   * DFS Slate Ownership Projections - Upcoming
+   *
+   * @remarks
+   * Returns DFS Slates which have not yet started for which we have DFS Ownership projections.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError} when
+   * the API answers with an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsDfsSlateOwnershipProjectionsUpcoming(
     request: MlbV3Projections.MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingRequest,
     options?: RequestOptions,
@@ -96,11 +147,15 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mlb/projections/{format}/UpcomingDfsSlateOwnershipProjections"),
+        urlTemplate: this.#servers.default(
+          "/v3/mlb/projections/{format}/UpcomingDfsSlateOwnershipProjections",
+        ),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -111,6 +166,21 @@ export class MlbV3Projections {
     );
   }
 
+  /**
+   * DFS Slates - by Date
+   *
+   * @remarks
+   * Returns DFS Slates which have not yet started for which we have DFS projections.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsDfsSlatesByDateError} when the API answers with
+   * an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsDfsSlatesByDate(
     request: MlbV3Projections.MlbV3ProjectionsDfsSlatesByDateRequest,
     options?: RequestOptions,
@@ -118,12 +188,14 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mlb/projections/{format}/DfsSlatesByDate/{date}"),
+        urlTemplate: this.#servers.default("/v3/mlb/projections/{format}/DfsSlatesByDate/{date}"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
           { name: "date", value: request.date, schema: s.string() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -134,6 +206,21 @@ export class MlbV3Projections {
     );
   }
 
+  /**
+   * Player Details - by Injured
+   *
+   * @remarks
+   * This endpoint provides all currently injured MLB players, along with injury details.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsPlayerDetailsByInjuredError} when the API
+   * answers with an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsPlayerDetailsByInjured(
     request: MlbV3Projections.MlbV3ProjectionsPlayerDetailsByInjuredRequest,
     options?: RequestOptions,
@@ -141,11 +228,13 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mlb/projections/{format}/InjuredPlayers"),
+        urlTemplate: this.#servers.default("/v3/mlb/projections/{format}/InjuredPlayers"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -156,6 +245,22 @@ export class MlbV3Projections {
     );
   }
 
+  /**
+   * Projected Player Game Stats - by Date
+   *
+   * @remarks
+   * SportsDataIO's proprietary projections, including DFS salary information and injuries, for
+   * fantasy players, called by date.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsProjectedPlayerGameStatsByDateError} when the
+   * API answers with an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsProjectedPlayerGameStatsByDate(
     request: MlbV3Projections.MlbV3ProjectionsProjectedPlayerGameStatsByDateRequest,
     options?: RequestOptions,
@@ -166,12 +271,16 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mlb/projections/{format}/PlayerGameProjectionStatsByDate/{date}"),
+        urlTemplate: this.#servers.default(
+          "/v3/mlb/projections/{format}/PlayerGameProjectionStatsByDate/{date}",
+        ),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
           { name: "date", value: request.date, schema: s.string() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -182,6 +291,22 @@ export class MlbV3Projections {
     );
   }
 
+  /**
+   * Projected Player Season Stats With ADP
+   *
+   * @remarks
+   * SportsDataIO's proprietary projections, including average draft position, for all active
+   * players for the season.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpError} when
+   * the API answers with an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsProjectedPlayerSeasonStatsWithAdp(
     request: MlbV3Projections.MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpRequest,
     options?: RequestOptions,
@@ -192,12 +317,16 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mlb/projections/{format}/PlayerSeasonProjectionStats/{season}"),
+        urlTemplate: this.#servers.default(
+          "/v3/mlb/projections/{format}/PlayerSeasonProjectionStats/{season}",
+        ),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
           { name: "season", value: request.season, schema: s.string() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -208,6 +337,21 @@ export class MlbV3Projections {
     );
   }
 
+  /**
+   * Starting Lineups - by Date
+   *
+   * @remarks
+   * Returns both projected and confirmed starting lineups for all games on a given date.
+   *
+   * @returns Success
+   *
+   * @throws {@link MlbV3Projections.MlbV3ProjectionsStartingLineupsByDateError} when the API
+   * answers with an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mlbV3ProjectionsStartingLineupsByDate(
     request: MlbV3Projections.MlbV3ProjectionsStartingLineupsByDateRequest,
     options?: RequestOptions,
@@ -215,12 +359,14 @@ export class MlbV3Projections {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mlb/projections/{format}/StartingLineupsByDate/{date}"),
+        urlTemplate: this.#servers.default("/v3/mlb/projections/{format}/StartingLineupsByDate/{date}"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
           { name: "date", value: request.date, schema: s.string() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -234,101 +380,151 @@ export class MlbV3Projections {
 
 export namespace MlbV3Projections {
   export type MlbV3ProjectionsDepthChartsRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
   };
 
-  export class MlbV3ProjectionsDepthChartsError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsDepthChartsError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsDepthChartsError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /**
+     * SlateID of the DFS Slate you wish to get ownership projections for. Will have an empty
+     * SlateOwnershipProjections if this slate was not projected
+     */
     slateId: number;
   };
 
-  export class MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsDfsSlateOwnershipProjectionsBySlateError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
   };
 
-  export class MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MlbV3ProjectionsDfsSlatesByDateRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /** The date of the slates. <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>. */
     date: string;
   };
 
-  export class MlbV3ProjectionsDfsSlatesByDateError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsDfsSlatesByDateError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsDfsSlatesByDateError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MlbV3ProjectionsPlayerDetailsByInjuredRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
   };
 
-  export class MlbV3ProjectionsPlayerDetailsByInjuredError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsPlayerDetailsByInjuredError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsPlayerDetailsByInjuredError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MlbV3ProjectionsProjectedPlayerGameStatsByDateRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /**
+     * The date of the game(s). <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>.
+     */
     date: string;
   };
 
-  export class MlbV3ProjectionsProjectedPlayerGameStatsByDateError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsProjectedPlayerGameStatsByDateError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsProjectedPlayerGameStatsByDateError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /** Year of the season. <br>Examples: <code>2017</code>, <code>2018</code>. */
     season: string;
   };
 
-  export class MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsProjectedPlayerSeasonStatsWithAdpError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MlbV3ProjectionsStartingLineupsByDateRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /** The date of the slates. <br>Examples: <code>2017-JUL-31</code>, <code>2017-SEP-01</code>. */
     date: string;
   };
 
-  export class MlbV3ProjectionsStartingLineupsByDateError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MlbV3ProjectionsStartingLineupsByDateError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MlbV3ProjectionsStartingLineupsByDateError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];

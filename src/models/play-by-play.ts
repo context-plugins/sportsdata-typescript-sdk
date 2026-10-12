@@ -5,8 +5,11 @@ import { quarterSchema, type Quarter } from "./quarter.js";
 import { score4Schema, type Score4 } from "./score4.js";
 
 export type PlayByPlay = {
+  /** The score object and other game details of the given game */
   score?: Score4;
+  /** The details of the quarters (including overtime periods) for the given game */
   quarters?: Quarter[];
+  /** The list of plays for the given game */
   plays?: Play[];
 };
 

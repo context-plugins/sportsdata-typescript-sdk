@@ -2,104 +2,240 @@ import * as s from "../core/validation/index.js";
 import type { Schema } from "../core/validation/schema.js";
 
 export type PlayerGame1 = {
+  /** The unique ID of the stat */
   statId?: number;
+  /** The unique ID of the team */
   teamId?: number | null;
+  /**
+   * The player's unique PlayerID as assigned by SportsDataIO. Note: this ID will stay with the
+   * player throughout their entire career
+   */
   playerId?: number | null;
+  /**
+   * The type of season that this record corresponds to (1=Regular Season; 2=Preseason;
+   * 3=Postseason; 4=Offseason; 5=AllStar; 6=Exhibition)
+   */
   seasonType?: number | null;
+  /** The NBA season of the game */
   season?: number | null;
+  /** The name of the player */
   name?: string | null;
+  /** The abbreviation [Key] of the player's team */
   team?: string | null;
+  /**
+   * The player's position associated with the given game or season. Possible values: C, F, FC, G,
+   * GF, PF, PG, SF, SG
+   */
   position?: string | null;
+  /**
+   * Indicates whether or not the player started the game Note: this will be one or zero for single
+   * game feeds
+   */
   started?: number | null;
+  /** The player's salary for FanDuel daily fantasy contests. */
   fanDuelSalary?: number | null;
+  /** The player's salary for DraftKings daily fantasy contests. */
   draftKingsSalary?: number | null;
+  /**
+   * The player's salary as calculated by SportsDataIO (formerly known as FantasyData). Based on the
+   * same salary cap as DraftKings contests ($50,000).
+   */
   fantasyDataSalary?: number | null;
+  /** The player's salary for Yahoo daily fantasy contests. */
   yahooSalary?: number | null;
+  /**
+   * The player's current injury status; in the form of likelihood that player plays. Possible
+   * values: Probable; Questionable; Doubtful; Out
+   */
   injuryStatus?: string | null;
+  /** The body part that is injured (Knee, Groin, Calf, Hamstring, etc.) */
   injuryBodyPart?: string | null;
+  /** The day that the injury started or was first discovered. */
   injuryStartDate?: string | null;
+  /** Brief description of the player's injury and expected availability. */
   injuryNotes?: string | null;
+  /** The player's eligible position in FanDuel's daily fantasy sports platform. */
   fanDuelPosition?: string | null;
+  /** The player's eligible position in DraftKings' daily fantasy sports platform. */
   draftKingsPosition?: string | null;
+  /** The player's eligible position in Yahoo's daily fantasy sports platform. */
   yahooPosition?: string | null;
+  /** The ranking of the player's opponent with regards to fantasy points allowed. */
   opponentRank?: number | null;
+  /** The ranking of the player's opponent by position with regards to fantasy points allowed. */
   opponentPositionRank?: number | null;
+  /**
+   * A globally unique ID for this team. This value is guaranteed to be unique across all
+   * sports/leagues.
+   */
   globalTeamId?: number | null;
+  /** The player's salary for Fantasy Draft's daily fantasy contests. */
   fantasyDraftSalary?: number | null;
+  /** The player's eligible position in Fantasy Draft's daily fantasy sports platform. */
   fantasyDraftPosition?: string | null;
+  /** The unique ID of this game */
   gameId?: number | null;
+  /** The unique ID of the team's opponent */
   opponentId?: number | null;
+  /** The name of the opponent */
   opponent?: string | null;
+  /** The day of the game */
   day?: string | null;
+  /** The date and time of the game */
   dateTime?: string | null;
+  /** Whether the team is home or away */
   homeOrAway?: string | null;
+  /** Whether the game is over (true/false) */
   isGameOver?: boolean;
+  /**
+   * A globally unique ID for this game. This value is guaranteed to be unique across all
+   * sports/leagues.
+   */
   globalGameId?: number | null;
+  /**
+   * A globally unique ID for this opponent. This value is guaranteed to be unique across all
+   * sports/leagues.
+   */
   globalOpponentId?: number | null;
+  /** The timestamp of when the record was last updated (US Eastern Time) */
   updated?: string | null;
+  /** The number of games played */
   games?: number | null;
+  /** Total fantasy points */
   fantasyPoints?: number | null;
+  /** Total number of minutes played */
   minutes?: number | null;
+  /** Total number of seconds played */
   seconds?: number | null;
+  /** Total number of field goals made */
   fieldGoalsMade?: number | null;
+  /** Total number of field goals attempted */
   fieldGoalsAttempted?: number | null;
+  /** Total field goal percentage */
   fieldGoalsPercentage?: number | null;
+  /** Total effective field goals percentage */
   effectiveFieldGoalsPercentage?: number | null;
+  /** Total two pointers made */
   twoPointersMade?: number | null;
+  /** Total two pointers attempted */
   twoPointersAttempted?: number | null;
+  /** Total two pointers percentage */
   twoPointersPercentage?: number | null;
+  /** Total three pointers made */
   threePointersMade?: number | null;
+  /** Total three pointers attempted */
   threePointersAttempted?: number | null;
+  /** Total three pointers percentage */
   threePointersPercentage?: number | null;
+  /** Total free throws made */
   freeThrowsMade?: number | null;
+  /** Total free throws attempted */
   freeThrowsAttempted?: number | null;
+  /** Total free throws percentage */
   freeThrowsPercentage?: number | null;
+  /** Total offensive rebounds */
   offensiveRebounds?: number | null;
+  /** Total defensive rebounds */
   defensiveRebounds?: number | null;
+  /** Total rebounds */
   rebounds?: number | null;
+  /** Total offensive rebounds percentage */
   offensiveReboundsPercentage?: number | null;
+  /** Total defensive rebounds percentage */
   defensiveReboundsPercentage?: number | null;
+  /** The player/team total rebounds percentage */
   totalReboundsPercentage?: number | null;
+  /** Total assists */
   assists?: number | null;
+  /** Total steals */
   steals?: number | null;
+  /** Total blocked shots */
   blockedShots?: number | null;
+  /** Total turnovers */
   turnovers?: number | null;
+  /** Total personal fouls */
   personalFouls?: number | null;
+  /** Total points scored */
   points?: number | null;
+  /**
+   * The player's true shooting attempts as defined here:
+   * http://www.basketball-reference.com/about/glossary.html
+   */
   trueShootingAttempts?: number | null;
+  /**
+   * The player's true shooting percentage as defined here:
+   * http://www.basketball-reference.com/about/glossary.html
+   */
   trueShootingPercentage?: number | null;
+  /**
+   * The player's linear weight efficiency rating as defined here:
+   * http://bleacherreport.com/articles/113144-cracking-the-code-how-to-calculate-hollingers-per-without-all-the-mess
+   */
   playerEfficiencyRating?: number | null;
+  /**
+   * The player's assist percentage as defined here:
+   * http://www.basketball-reference.com/about/glossary.html
+   */
   assistsPercentage?: number | null;
+  /**
+   * The player's steal percentage as defined here:
+   * http://www.basketball-reference.com/about/glossary.html
+   */
   stealsPercentage?: number | null;
+  /**
+   * The player's block percentage as defined here:
+   * http://www.basketball-reference.com/about/glossary.html
+   */
   blocksPercentage?: number | null;
+  /**
+   * The player's turnover percentage as defined here:
+   * http://www.basketball-reference.com/about/glossary.html
+   */
   turnOversPercentage?: number | null;
+  /**
+   * The player's usage rate percentage as defined here:
+   * http://www.basketball-reference.com/about/glossary.html
+   */
   usageRatePercentage?: number | null;
+  /** Total FanDuel daily fantasy points scored */
   fantasyPointsFanDuel?: number | null;
+  /** Total DraftKings daily fantasy points scored */
   fantasyPointsDraftKings?: number | null;
+  /** Total Yahoo daily fantasy points scored */
   fantasyPointsYahoo?: number | null;
+  /** Total plus minus */
   plusMinus?: number | null;
+  /** Total double-doubles scored */
   doubleDoubles?: number | null;
+  /** Total triple-doubles scored */
   tripleDoubles?: number | null;
+  /** Total FantasyDraft daily fantasy points scored */
   fantasyPointsFantasyDraft?: number | null;
+  /**
+   * Indicates whether the game is over and the stats for this player have been verified and closed
+   * out.
+   */
   isClosed?: boolean;
+  /** Indicates whether starting lineup is confirmed */
   lineupConfirmed?: boolean | null;
+  /** Indicates whether player is starting, active, or inactive */
   lineupStatus?: string | null;
 };
 
 export const playerGame1Schema: Schema<PlayerGame1> = s.object<PlayerGame1>({
-  statId: s.optional(s.number()),
-  teamId: s.optionalNullable(s.number()),
-  playerId: s.optionalNullable(s.number()),
-  seasonType: s.optionalNullable(s.number()),
-  season: s.optionalNullable(s.number()),
+  statId: s.optional(s.int()),
+  teamId: s.optionalNullable(s.int()),
+  playerId: s.optionalNullable(s.int()),
+  seasonType: s.optionalNullable(s.int()),
+  season: s.optionalNullable(s.int()),
   name: s.optionalNullable(s.string()),
   team: s.optionalNullable(s.string()),
   position: s.optionalNullable(s.string()),
-  started: s.optionalNullable(s.number()),
-  fanDuelSalary: s.optionalNullable(s.number()),
-  draftKingsSalary: s.optionalNullable(s.number()),
-  fantasyDataSalary: s.optionalNullable(s.number()),
-  yahooSalary: s.optionalNullable(s.number()),
+  started: s.optionalNullable(s.int()),
+  fanDuelSalary: s.optionalNullable(s.int()),
+  draftKingsSalary: s.optionalNullable(s.int()),
+  fantasyDataSalary: s.optionalNullable(s.int()),
+  yahooSalary: s.optionalNullable(s.int()),
   injuryStatus: s.optionalNullable(s.string()),
   injuryBodyPart: s.optionalNullable(s.string()),
   injuryStartDate: s.optionalNullable(s.string()),
@@ -107,65 +243,65 @@ export const playerGame1Schema: Schema<PlayerGame1> = s.object<PlayerGame1>({
   fanDuelPosition: s.optionalNullable(s.string()),
   draftKingsPosition: s.optionalNullable(s.string()),
   yahooPosition: s.optionalNullable(s.string()),
-  opponentRank: s.optionalNullable(s.number()),
-  opponentPositionRank: s.optionalNullable(s.number()),
-  globalTeamId: s.optionalNullable(s.number()),
-  fantasyDraftSalary: s.optionalNullable(s.number()),
+  opponentRank: s.optionalNullable(s.int()),
+  opponentPositionRank: s.optionalNullable(s.int()),
+  globalTeamId: s.optionalNullable(s.int()),
+  fantasyDraftSalary: s.optionalNullable(s.int()),
   fantasyDraftPosition: s.optionalNullable(s.string()),
-  gameId: s.optionalNullable(s.number()),
-  opponentId: s.optionalNullable(s.number()),
+  gameId: s.optionalNullable(s.int()),
+  opponentId: s.optionalNullable(s.int()),
   opponent: s.optionalNullable(s.string()),
   day: s.optionalNullable(s.string()),
   dateTime: s.optionalNullable(s.string()),
   homeOrAway: s.optionalNullable(s.string()),
   isGameOver: s.optional(s.boolean()),
-  globalGameId: s.optionalNullable(s.number()),
-  globalOpponentId: s.optionalNullable(s.number()),
+  globalGameId: s.optionalNullable(s.int()),
+  globalOpponentId: s.optionalNullable(s.int()),
   updated: s.optionalNullable(s.string()),
-  games: s.optionalNullable(s.number()),
-  fantasyPoints: s.optionalNullable(s.number()),
-  minutes: s.optionalNullable(s.number()),
-  seconds: s.optionalNullable(s.number()),
-  fieldGoalsMade: s.optionalNullable(s.number()),
-  fieldGoalsAttempted: s.optionalNullable(s.number()),
-  fieldGoalsPercentage: s.optionalNullable(s.number()),
-  effectiveFieldGoalsPercentage: s.optionalNullable(s.number()),
-  twoPointersMade: s.optionalNullable(s.number()),
-  twoPointersAttempted: s.optionalNullable(s.number()),
-  twoPointersPercentage: s.optionalNullable(s.number()),
-  threePointersMade: s.optionalNullable(s.number()),
-  threePointersAttempted: s.optionalNullable(s.number()),
-  threePointersPercentage: s.optionalNullable(s.number()),
-  freeThrowsMade: s.optionalNullable(s.number()),
-  freeThrowsAttempted: s.optionalNullable(s.number()),
-  freeThrowsPercentage: s.optionalNullable(s.number()),
-  offensiveRebounds: s.optionalNullable(s.number()),
-  defensiveRebounds: s.optionalNullable(s.number()),
-  rebounds: s.optionalNullable(s.number()),
-  offensiveReboundsPercentage: s.optionalNullable(s.number()),
-  defensiveReboundsPercentage: s.optionalNullable(s.number()),
-  totalReboundsPercentage: s.optionalNullable(s.number()),
-  assists: s.optionalNullable(s.number()),
-  steals: s.optionalNullable(s.number()),
-  blockedShots: s.optionalNullable(s.number()),
-  turnovers: s.optionalNullable(s.number()),
-  personalFouls: s.optionalNullable(s.number()),
-  points: s.optionalNullable(s.number()),
-  trueShootingAttempts: s.optionalNullable(s.number()),
-  trueShootingPercentage: s.optionalNullable(s.number()),
-  playerEfficiencyRating: s.optionalNullable(s.number()),
-  assistsPercentage: s.optionalNullable(s.number()),
-  stealsPercentage: s.optionalNullable(s.number()),
-  blocksPercentage: s.optionalNullable(s.number()),
-  turnOversPercentage: s.optionalNullable(s.number()),
-  usageRatePercentage: s.optionalNullable(s.number()),
-  fantasyPointsFanDuel: s.optionalNullable(s.number()),
-  fantasyPointsDraftKings: s.optionalNullable(s.number()),
-  fantasyPointsYahoo: s.optionalNullable(s.number()),
-  plusMinus: s.optionalNullable(s.number()),
-  doubleDoubles: s.optionalNullable(s.number()),
-  tripleDoubles: s.optionalNullable(s.number()),
-  fantasyPointsFantasyDraft: s.optionalNullable(s.number()),
+  games: s.optionalNullable(s.int()),
+  fantasyPoints: s.optionalNullable(s.float64()),
+  minutes: s.optionalNullable(s.int()),
+  seconds: s.optionalNullable(s.int()),
+  fieldGoalsMade: s.optionalNullable(s.float64()),
+  fieldGoalsAttempted: s.optionalNullable(s.float64()),
+  fieldGoalsPercentage: s.optionalNullable(s.float64()),
+  effectiveFieldGoalsPercentage: s.optionalNullable(s.float64()),
+  twoPointersMade: s.optionalNullable(s.float64()),
+  twoPointersAttempted: s.optionalNullable(s.float64()),
+  twoPointersPercentage: s.optionalNullable(s.float64()),
+  threePointersMade: s.optionalNullable(s.float64()),
+  threePointersAttempted: s.optionalNullable(s.float64()),
+  threePointersPercentage: s.optionalNullable(s.float64()),
+  freeThrowsMade: s.optionalNullable(s.float64()),
+  freeThrowsAttempted: s.optionalNullable(s.float64()),
+  freeThrowsPercentage: s.optionalNullable(s.float64()),
+  offensiveRebounds: s.optionalNullable(s.float64()),
+  defensiveRebounds: s.optionalNullable(s.float64()),
+  rebounds: s.optionalNullable(s.float64()),
+  offensiveReboundsPercentage: s.optionalNullable(s.float64()),
+  defensiveReboundsPercentage: s.optionalNullable(s.float64()),
+  totalReboundsPercentage: s.optionalNullable(s.float64()),
+  assists: s.optionalNullable(s.float64()),
+  steals: s.optionalNullable(s.float64()),
+  blockedShots: s.optionalNullable(s.float64()),
+  turnovers: s.optionalNullable(s.float64()),
+  personalFouls: s.optionalNullable(s.float64()),
+  points: s.optionalNullable(s.float64()),
+  trueShootingAttempts: s.optionalNullable(s.float64()),
+  trueShootingPercentage: s.optionalNullable(s.float64()),
+  playerEfficiencyRating: s.optionalNullable(s.float64()),
+  assistsPercentage: s.optionalNullable(s.float64()),
+  stealsPercentage: s.optionalNullable(s.float64()),
+  blocksPercentage: s.optionalNullable(s.float64()),
+  turnOversPercentage: s.optionalNullable(s.float64()),
+  usageRatePercentage: s.optionalNullable(s.float64()),
+  fantasyPointsFanDuel: s.optionalNullable(s.float64()),
+  fantasyPointsDraftKings: s.optionalNullable(s.float64()),
+  fantasyPointsYahoo: s.optionalNullable(s.float64()),
+  plusMinus: s.optionalNullable(s.float64()),
+  doubleDoubles: s.optionalNullable(s.float64()),
+  tripleDoubles: s.optionalNullable(s.float64()),
+  fantasyPointsFantasyDraft: s.optionalNullable(s.float64()),
   isClosed: s.optional(s.boolean()),
   lineupConfirmed: s.optionalNullable(s.boolean()),
   lineupStatus: s.optionalNullable(s.string()),

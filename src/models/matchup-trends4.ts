@@ -6,10 +6,15 @@ import { teamGameTrendsSchema, type TeamGameTrends } from "./team-game-trends.js
 import { teamTrends2Schema, type TeamTrends2 } from "./team-trends2.js";
 
 export type MatchupTrends4 = {
+  /** The most recent future game for the team and their opponent */
   upcomingGame?: Game23;
+  /** The collection of team trends between each team */
   teamTrends?: TeamTrends2[];
+  /** The collection of team game trends against the opponent */
   teamMatchupTrends?: TeamGameTrends[];
+  /** The collection of opponent game trends against team */
   opponentMatchupTrends?: TeamGameTrends[];
+  /** The collection of last 10 game scores between each team */
   previousGames?: Game8[];
 };
 

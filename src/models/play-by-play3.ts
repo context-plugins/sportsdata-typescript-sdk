@@ -4,7 +4,9 @@ import { game52Schema, type Game52 } from "./game52.js";
 import { play3Schema, type Play3 } from "./play3.js";
 
 export type PlayByPlay3 = {
+  /** The details of the game associated with this play-by-play */
   game?: Game52;
+  /** List of Plays in the game */
   plays?: Play3[];
 };
 

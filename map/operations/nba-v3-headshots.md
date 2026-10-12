@@ -4,7 +4,7 @@
 
 Accessor: `client.nbaV3Headshots` · Source: `src/resources/nba-v3-headshots.ts` · 1 operation · Request and error types: namespace `NbaV3Headshots`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nbaV3HeadshotsHeadshots
 
@@ -13,7 +13,7 @@ Accessor: `client.nbaV3Headshots` · Source: `src/resources/nba-v3-headshots.ts`
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Headshot[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NbaV3Headshots.NbaV3HeadshotsHeadshotsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NbaV3Headshots.NbaV3HeadshotsHeadshotsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NbaV3Headshots.NbaV3HeadshotsHeadshotsRequest` (1):

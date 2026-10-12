@@ -4,7 +4,7 @@
 
 Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27 operations · Request and error types: namespace `NhlV3Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nhlV3ScoresAreGamesInProgress
 
@@ -13,7 +13,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `boolean` — a bare `application/json` boolean; the success type *is* the boolean
-- **Error**: `NhlV3Scores.NhlV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresAreGamesInProgressRequest` (1):
@@ -34,7 +34,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGoalieDepthChart[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresDepthChartsGoaliesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresDepthChartsGoaliesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresDepthChartsGoaliesRequest` (1):
@@ -56,7 +56,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresGamesByDateFinalRequest` (2):
@@ -79,7 +79,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresGamesByDateLiveFinalRequest` (2):
@@ -102,7 +102,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresGamesBasicByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresGamesBasicByDateFinalRequest` (2):
@@ -125,7 +125,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresGamesBasicByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresGamesBasicByDateLiveFinalRequest` (2):
@@ -148,7 +148,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresNewsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresNewsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresNewsRequest` (1):
@@ -170,7 +170,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `News1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresNewsByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresNewsByDateRequest` (2):
@@ -193,7 +193,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresPlayerDetailsByActiveRequest` (1):
@@ -215,7 +215,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresPlayerDetailsByActive2Error` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresPlayerDetailsByActive2Error` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresPlayerDetailsByActive2Request` (1):
@@ -237,7 +237,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresPlayerDetailsByFreeAgentsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresPlayerDetailsByFreeAgentsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresPlayerDetailsByFreeAgentsRequest` (1):
@@ -259,7 +259,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresPlayerDetailsByFreeAgents2Error` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresPlayerDetailsByFreeAgents2Error` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresPlayerDetailsByFreeAgents2Request` (1):
@@ -281,7 +281,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresPlayersDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresPlayersDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresPlayersDetailsByTeamRequest` (2):
@@ -304,7 +304,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresPlayersProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresPlayersProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresPlayersProfilesByTeamRequest` (2):
@@ -327,7 +327,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Referee1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresRefereesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresRefereesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresRefereesRequest` (1):
@@ -349,7 +349,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game7[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresSchedulesRequest` (2):
@@ -372,7 +372,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScheduleBasic3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresSchedulesBasicRequest` (2):
@@ -395,7 +395,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Season`
-- **Error**: `NhlV3Scores.NhlV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresSeasonCurrentRequest` (1):
@@ -417,7 +417,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Stadium1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresStadiumsRequest` (1):
@@ -439,7 +439,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Standing3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresStandingsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresStandingsRequest` (2):
@@ -462,7 +462,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresTeamGameLogsBySeasonRequest` (4):
@@ -487,7 +487,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresTeamGameStatsByDateLiveFinalRequest` (2):
@@ -510,7 +510,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresTeamProfilesAllRequest` (1):
@@ -532,7 +532,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresTeamProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresTeamProfilesByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresTeamProfilesByActiveRequest` (1):
@@ -554,7 +554,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresTeamProfilesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresTeamProfilesBySeasonRequest` (2):
@@ -577,7 +577,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamSeason3[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresTeamSeasonStatsRequest` (2):
@@ -600,7 +600,7 @@ Accessor: `client.nhlV3Scores` · Source: `src/resources/nhl-v3-scores.ts` · 27
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Transaction[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NhlV3Scores.NhlV3ScoresTransactionsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NhlV3Scores.NhlV3ScoresTransactionsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NhlV3Scores.NhlV3ScoresTransactionsRequest` (2):

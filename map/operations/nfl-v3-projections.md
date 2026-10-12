@@ -4,7 +4,7 @@
 
 Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections.ts` · 13 operations · Request and error types: namespace `NflV3Projections`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nflV3ProjectionsDfsSlateOwnershipProjectionsBySlate
 
@@ -13,7 +13,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlateWithOwnershipProjection`
-- **Error**: `NflV3Projections.NflV3ProjectionsDfsSlateOwnershipProjectionsBySlateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsDfsSlateOwnershipProjectionsBySlateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsDfsSlateOwnershipProjectionsBySlateRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlateWithOwnershipProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsDfsSlateOwnershipProjectionsUpcomingError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsDfsSlateOwnershipProjectionsUpcomingRequest` (1):
@@ -58,7 +58,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsDfsSlatesByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsDfsSlatesByDateRequest` (2):
@@ -81,7 +81,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `DfsSlate[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsDfsSlatesByWeekError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsDfsSlatesByWeekError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsDfsSlatesByWeekRequest` (3):
@@ -105,7 +105,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsIdpProjectedPlayerGameStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsIdpProjectedPlayerGameStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsIdpProjectedPlayerGameStatsByTeamRequest` (4):
@@ -130,7 +130,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsIdpProjectedPlayerGameStatsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsIdpProjectedPlayerGameStatsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsIdpProjectedPlayerGameStatsByWeekRequest` (3):
@@ -154,7 +154,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsPlayerDetailsByInjuredRequest` (1):
@@ -176,7 +176,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `FantasyDefenseGameProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsProjectedFantasyDefenseGameStatsWithDfsSalariesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsProjectedFantasyDefenseGameStatsWithDfsSalariesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsProjectedFantasyDefenseGameStatsWithDfsSalariesRequest` (3):
@@ -200,7 +200,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `FantasyDefenseSeasonProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsProjectedFantasyDefenseSeasonStatsWithAdpError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsProjectedFantasyDefenseSeasonStatsWithAdpError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsProjectedFantasyDefenseSeasonStatsWithAdpRequest` (2):
@@ -223,7 +223,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsProjectedPlayerGameStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsProjectedPlayerGameStatsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsProjectedPlayerGameStatsByTeamRequest` (4):
@@ -248,7 +248,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerGameProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsProjectedPlayerGameStatsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsProjectedPlayerGameStatsByWeekError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsProjectedPlayerGameStatsByWeekRequest` (3):
@@ -272,7 +272,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeasonProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsProjectedPlayerSeasonStatsWithAdpError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsProjectedPlayerSeasonStatsWithAdpError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsProjectedPlayerSeasonStatsWithAdpRequest` (2):
@@ -295,7 +295,7 @@ Accessor: `client.nflV3Projections` · Source: `src/resources/nfl-v3-projections
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerSeasonProjection[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3Projections.NflV3ProjectionsProjectedPlayerSeasonStatsWithAdpByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3Projections.NflV3ProjectionsProjectedPlayerSeasonStatsWithAdpByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3Projections.NflV3ProjectionsProjectedPlayerSeasonStatsWithAdpByTeamRequest` (3):

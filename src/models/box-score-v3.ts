@@ -9,12 +9,19 @@ import { scoringPlaySchema, type ScoringPlay } from "./scoring-play.js";
 import { teamGameSchema, type TeamGame } from "./team-game.js";
 
 export type BoxScoreV3 = {
+  /** The Score object related to this game */
   score?: Score3;
+  /** The Quarters objects related to this game */
   quarters?: Quarter[];
+  /** The TeamGame objects related to this game */
   teamGames?: TeamGame[];
+  /** The PlayerGame objects related to this game */
   playerGames?: PlayerGame[];
+  /** The FantasyDefenseGame objects related to this game */
   fantasyDefenseGames?: FantasyDefenseGame[];
+  /** The ScoringPlay objects related to this game */
   scoringPlays?: ScoringPlay[];
+  /** The ScoringDetail objects related to this game */
   scoringDetails?: ScoringDetail[];
 };
 

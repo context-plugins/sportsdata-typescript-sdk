@@ -4,7 +4,7 @@
 
 Accessor: `client.nflV3PlayByPlay` · Source: `src/resources/nfl-v3-play-by-play.ts` · 6 operations · Request and error types: namespace `NflV3PlayByPlay`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### nflV3PbpPlayByPlayByTeamFinal
 
@@ -13,7 +13,7 @@ Accessor: `client.nflV3PlayByPlay` · Source: `src/resources/nfl-v3-play-by-play
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayByPlay`
-- **Error**: `NflV3PlayByPlay.NflV3PbpPlayByPlayByTeamFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3PlayByPlay.NflV3PbpPlayByPlayByTeamFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3PlayByPlay.NflV3PbpPlayByPlayByTeamFinalRequest` (4):
@@ -38,7 +38,7 @@ Accessor: `client.nflV3PlayByPlay` · Source: `src/resources/nfl-v3-play-by-play
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayByPlay`
-- **Error**: `NflV3PlayByPlay.NflV3PbpPlayByPlayByTeamLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3PlayByPlay.NflV3PbpPlayByPlayByTeamLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3PlayByPlay.NflV3PbpPlayByPlayByTeamLiveFinalRequest` (4):
@@ -63,7 +63,7 @@ Accessor: `client.nflV3PlayByPlay` · Source: `src/resources/nfl-v3-play-by-play
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayByPlay`
-- **Error**: `NflV3PlayByPlay.NflV3PbpPlayByPlayFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3PlayByPlay.NflV3PbpPlayByPlayFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3PlayByPlay.NflV3PbpPlayByPlayFinalRequest` (2):
@@ -86,7 +86,7 @@ Accessor: `client.nflV3PlayByPlay` · Source: `src/resources/nfl-v3-play-by-play
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayByPlay`
-- **Error**: `NflV3PlayByPlay.NflV3PbpPlayByPlayLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3PlayByPlay.NflV3PbpPlayByPlayLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3PlayByPlay.NflV3PbpPlayByPlayLiveFinalRequest` (2):
@@ -109,7 +109,7 @@ Accessor: `client.nflV3PlayByPlay` · Source: `src/resources/nfl-v3-play-by-play
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayByPlay[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3PlayByPlay.NflV3PbpPlayByPlayDeltaError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3PlayByPlay.NflV3PbpPlayByPlayDeltaError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3PlayByPlay.NflV3PbpPlayByPlayDeltaRequest` (4):
@@ -134,7 +134,7 @@ Accessor: `client.nflV3PlayByPlay` · Source: `src/resources/nfl-v3-play-by-play
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayByPlay[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `NflV3PlayByPlay.NflV3PbpPlayByPlaySimulationError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `NflV3PlayByPlay.NflV3PbpPlayByPlaySimulationError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `NflV3PlayByPlay.NflV3PbpPlayByPlaySimulationRequest` (2):

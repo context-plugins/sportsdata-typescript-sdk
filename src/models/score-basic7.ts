@@ -3,85 +3,161 @@ import type { Schema } from "../core/validation/schema.js";
 import { playoffAggregateScore2Schema, type PlayoffAggregateScore2 } from "./playoff-aggregate-score2.js";
 
 export type ScoreBasic7 = {
+  /**
+   * The final period of the game. Possible values: Regular = Game ended in 90 minutes of regular
+   * time; ExtraTime = Game ended in extra time / overtime; PenaltyShootout = Game finished in
+   * penalty shootout time
+   */
   period?: string | null;
+  /**
+   * The clock for the game if it is in progress. Note: if the game hasn't started or the game is
+   * over; then this will be NULL.
+   */
   clock?: number | null;
+  /** The unique ID of the game */
   gameId?: number;
+  /** The unique ID of the round that this game is associated with. */
   roundId?: number;
+  /** The soccer regular season for which these totals apply */
   season?: number;
+  /**
+   * The type of season that this record corresponds to (1=Regular Season, 2=Preseason,
+   * 3=Postseason, 4=Offseason, 5=AllStar).
+   */
   seasonType?: number;
+  /** The name of the group in which this game occurs. Note: This is used in tournaments & cups */
   group?: string | null;
+  /** The unique ID of the away team */
   awayTeamId?: number | null;
+  /** The unique ID of the home team */
   homeTeamId?: number | null;
+  /** The unique ID of the venue */
   venueId?: number | null;
+  /** The day of the game */
   day?: string | null;
+  /** The date and time of the game */
   dateTime?: string | null;
+  /**
+   * Indicates the game's status. Possible values include: Scheduled, InProgress, Break, Final,
+   * Awarded, Postponed, Canceled, Suspended, Start Delay, Rain Delay, No Result, & NotNecessary. If
+   * a game is called off before it starts, the Status is set to Postponed, until a new date/time is
+   * scheduled, at which point, the DateTime is updated, and the Status is set back to Scheduled. If
+   * a game has already started, and temporarily interrupted, it's Status is set to Suspended, until
+   * it either resumes, or gets postponed and replayed at a later date. If the game is at halftime,
+   * then the Status will be Break. Awarded is used in cases where a game is decided on the so
+   * called "green table." That means that a game was decided by the Federation/League to one team
+   * for a reason. This can include situations like riots, where the opponent team gets 3:0 win
+   * awarded as punishment. Awarded is also used when a club withdraws during the season from the
+   * competition then all the remaining matches getting awarded 3:0.
+   */
   status?: string | null;
+  /** The week during the season/round in which this game occurs */
   week?: number | null;
+  /** The winner of the game. Possible values: AwayTeam; HomeTeam; Draw */
   winner?: string | null;
+  /** Shows which team has home field advantage. Possible values: Home; Away; Neutral */
   venueType?: string | null;
+  /** The abbreviation [Key] of the away team */
   awayTeamKey?: string | null;
+  /** The name of the away team */
   awayTeamName?: string | null;
+  /** The country code of the away team */
   awayTeamCountryCode?: string | null;
+  /** The final score of the away team */
   awayTeamScore?: number | null;
+  /** The first period score of the away team. */
   awayTeamScorePeriod1?: number | null;
+  /** The second period score of the away team. */
   awayTeamScorePeriod2?: number | null;
+  /** The extra time (overtime) score of the away team (if applicable). */
   awayTeamScoreExtraTime?: number | null;
+  /** The penalty shootout score of the away team (if applicable). */
   awayTeamScorePenalty?: number | null;
+  /** The abbreviation [Key] of the home team */
   homeTeamKey?: string | null;
+  /** The name of the home team */
   homeTeamName?: string | null;
+  /** The country code of the home team */
   homeTeamCountryCode?: string | null;
+  /** The final score of the home team */
   homeTeamScore?: number | null;
+  /** The first period score of the home team */
   homeTeamScorePeriod1?: number | null;
+  /** The second period score of the home team */
   homeTeamScorePeriod2?: number | null;
+  /** The extra time (overtime) score of the home team (if applicable) */
   homeTeamScoreExtraTime?: number | null;
+  /** The penalty shootout score of the home team (if applicable) */
   homeTeamScorePenalty?: number | null;
+  /** The timestamp of when the record was last updated (in US Eastern Time) */
   updated?: string | null;
+  /** The timestamp of when this record was updated (in UTC) */
   updatedUtc?: string | null;
+  /**
+   * A globally unique ID for this game. This value is guaranteed to be unique across all
+   * sports/leagues.
+   */
   globalGameId?: number;
+  /**
+   * A globally unique ID for the away team. This value is guaranteed to be unique across all
+   * sports/leagues.
+   */
   globalAwayTeamId?: number | null;
+  /**
+   * A globally unique ID for the home team. This value is guaranteed to be unique across all
+   * sports/leagues.
+   */
   globalHomeTeamId?: number | null;
+  /**
+   * Indicates whether the game is over and the final score and stats have been verified and closed
+   * out
+   */
   isClosed?: boolean | null;
+  /**
+   * Aggregate scoring information for 2-leg/home-and-home games (i.e. Champions League Round of
+   * 16). Team A is determined by the first legs home team.
+   */
   playoffAggregateScore?: PlayoffAggregateScore2;
 };
 
 export const scoreBasic7Schema: Schema<ScoreBasic7> = s.object<ScoreBasic7>({
   period: s.optionalNullable(s.string()),
-  clock: s.optionalNullable(s.number()),
-  gameId: s.optional(s.number()),
-  roundId: s.optional(s.number()),
-  season: s.optional(s.number()),
-  seasonType: s.optional(s.number()),
+  clock: s.optionalNullable(s.int()),
+  gameId: s.optional(s.int()),
+  roundId: s.optional(s.int()),
+  season: s.optional(s.int()),
+  seasonType: s.optional(s.int()),
   group: s.optionalNullable(s.string()),
-  awayTeamId: s.optionalNullable(s.number()),
-  homeTeamId: s.optionalNullable(s.number()),
-  venueId: s.optionalNullable(s.number()),
+  awayTeamId: s.optionalNullable(s.int()),
+  homeTeamId: s.optionalNullable(s.int()),
+  venueId: s.optionalNullable(s.int()),
   day: s.optionalNullable(s.string()),
   dateTime: s.optionalNullable(s.string()),
   status: s.optionalNullable(s.string()),
-  week: s.optionalNullable(s.number()),
+  week: s.optionalNullable(s.int()),
   winner: s.optionalNullable(s.string()),
   venueType: s.optionalNullable(s.string()),
   awayTeamKey: s.optionalNullable(s.string()),
   awayTeamName: s.optionalNullable(s.string()),
   awayTeamCountryCode: s.optionalNullable(s.string()),
-  awayTeamScore: s.optionalNullable(s.number()),
-  awayTeamScorePeriod1: s.optionalNullable(s.number()),
-  awayTeamScorePeriod2: s.optionalNullable(s.number()),
-  awayTeamScoreExtraTime: s.optionalNullable(s.number()),
-  awayTeamScorePenalty: s.optionalNullable(s.number()),
+  awayTeamScore: s.optionalNullable(s.int()),
+  awayTeamScorePeriod1: s.optionalNullable(s.int()),
+  awayTeamScorePeriod2: s.optionalNullable(s.int()),
+  awayTeamScoreExtraTime: s.optionalNullable(s.int()),
+  awayTeamScorePenalty: s.optionalNullable(s.int()),
   homeTeamKey: s.optionalNullable(s.string()),
   homeTeamName: s.optionalNullable(s.string()),
   homeTeamCountryCode: s.optionalNullable(s.string()),
-  homeTeamScore: s.optionalNullable(s.number()),
-  homeTeamScorePeriod1: s.optionalNullable(s.number()),
-  homeTeamScorePeriod2: s.optionalNullable(s.number()),
-  homeTeamScoreExtraTime: s.optionalNullable(s.number()),
-  homeTeamScorePenalty: s.optionalNullable(s.number()),
+  homeTeamScore: s.optionalNullable(s.int()),
+  homeTeamScorePeriod1: s.optionalNullable(s.int()),
+  homeTeamScorePeriod2: s.optionalNullable(s.int()),
+  homeTeamScoreExtraTime: s.optionalNullable(s.int()),
+  homeTeamScorePenalty: s.optionalNullable(s.int()),
   updated: s.optionalNullable(s.string()),
   updatedUtc: s.optionalNullable(s.string()),
-  globalGameId: s.optional(s.number()),
-  globalAwayTeamId: s.optionalNullable(s.number()),
-  globalHomeTeamId: s.optionalNullable(s.number()),
+  globalGameId: s.optional(s.int()),
+  globalAwayTeamId: s.optionalNullable(s.int()),
+  globalHomeTeamId: s.optionalNullable(s.int()),
   isClosed: s.optionalNullable(s.boolean()),
   playoffAggregateScore: s.optional(s.lazy(() => playoffAggregateScore2Schema)),
   _keysMap: {

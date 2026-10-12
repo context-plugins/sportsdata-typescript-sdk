@@ -4,7 +4,7 @@
 
 Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22 operations · Request and error types: namespace `CbbV3Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### cbbV3ScoresAreGamesInProgress
 
@@ -13,7 +13,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `boolean` — a bare `application/json` boolean; the success type *is* the boolean
-- **Error**: `CbbV3Scores.CbbV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresAreGamesInProgressError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresAreGamesInProgressRequest` (1):
@@ -34,7 +34,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game9[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresGamesByDateFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresGamesByDateFinalRequest` (2):
@@ -57,7 +57,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game9[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresGamesByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresGamesByDateLiveFinalRequest` (2):
@@ -80,7 +80,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game9[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresGamesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresGamesBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresGamesBySeasonRequest` (2):
@@ -103,7 +103,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game9[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresGamesBySeasonFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresGamesBySeasonFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresGamesBySeasonFinalRequest` (2):
@@ -126,7 +126,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScoreBasic5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresGamesBasicByDateError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresGamesBasicByDateError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresGamesBasicByDateRequest` (2):
@@ -149,7 +149,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Conference1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresLeagueHierarchyError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresLeagueHierarchyError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresLeagueHierarchyRequest` (1):
@@ -171,7 +171,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresPlayerDetailsByActiveError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresPlayerDetailsByActiveRequest` (1):
@@ -193,7 +193,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresPlayerDetailsByActive2Error` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresPlayerDetailsByActive2Error` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresPlayerDetailsByActive2Request` (1):
@@ -215,7 +215,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresPlayerDetailsByInjuredError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresPlayerDetailsByInjuredRequest` (1):
@@ -237,7 +237,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Player5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresPlayerDetailsByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresPlayerDetailsByTeamRequest` (2):
@@ -260,7 +260,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `PlayerBasic5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresPlayerProfilesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresPlayerProfilesByTeamRequest` (2):
@@ -283,7 +283,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Game9[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresSchedulesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresSchedulesByTeamError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresSchedulesByTeamRequest` (3):
@@ -307,7 +307,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `ScheduleBasic5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresSchedulesBasicError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresSchedulesBasicRequest` (2):
@@ -330,7 +330,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Season3`
-- **Error**: `CbbV3Scores.CbbV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresSeasonCurrentError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresSeasonCurrentRequest` (1):
@@ -352,7 +352,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Stadium1[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresStadiumsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresStadiumsRequest` (1):
@@ -374,7 +374,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresTeamGameLogsBySeasonError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresTeamGameLogsBySeasonRequest` (4):
@@ -399,7 +399,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamGame5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresTeamGameStatsByDateLiveFinalError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresTeamGameStatsByDateLiveFinalRequest` (2):
@@ -422,7 +422,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Team5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresTeamProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresTeamProfilesAllRequest` (1):
@@ -444,7 +444,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamSeason5[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresTeamSeasonStatsError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresTeamSeasonStatsRequest` (2):
@@ -467,7 +467,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `TeamBasic2[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `CbbV3Scores.CbbV3ScoresTeamsBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresTeamsBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresTeamsBasicAllRequest` (1):
@@ -489,7 +489,7 @@ Accessor: `client.cbbV3Scores` · Source: `src/resources/cbb-v3-scores.ts` · 22
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Tournament`
-- **Error**: `CbbV3Scores.CbbV3ScoresTournamentHierarchyError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `CbbV3Scores.CbbV3ScoresTournamentHierarchyError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `CbbV3Scores.CbbV3ScoresTournamentHierarchyRequest` (2):

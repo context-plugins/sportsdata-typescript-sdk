@@ -4,7 +4,9 @@ import { playerTournamentOddSchema, type PlayerTournamentOdd } from "./player-to
 import { tournament3Schema, type Tournament3 } from "./tournament3.js";
 
 export type TournamentOdds = {
+  /** The details of the tournament */
   tournament?: Tournament3;
+  /** The tournaments collection of PlayerTournamentOdds */
   playerTournamentOdds?: PlayerTournamentOdd[];
 };
 

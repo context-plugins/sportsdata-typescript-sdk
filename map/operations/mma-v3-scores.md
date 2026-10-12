@@ -4,7 +4,7 @@
 
 Accessor: `client.mmaV3Scores` · Source: `src/resources/mma-v3-scores.ts` · 6 operations · Request and error types: namespace `MmaV3Scores`
 
-**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ResponseError` and the runtime error family are excluded — see sdk-map.md.
+**Type sources**: every type an operation names, with the file that declares it and the schema value exported beside it. Import every name from `sports-data-io`; the `Source` path is where to **read** the shape, never what to import. `ApiError`, the runtime error family and the file vocabulary are excluded — see sdk-map.md.
 
 ### mmaV3ScoresEvent
 
@@ -13,7 +13,7 @@ Accessor: `client.mmaV3Scores` · Source: `src/resources/mma-v3-scores.ts` · 6 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `EventDetail`
-- **Error**: `MmaV3Scores.MmaV3ScoresEventError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Scores.MmaV3ScoresEventError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Scores.MmaV3ScoresEventRequest` (2):
@@ -36,7 +36,7 @@ Accessor: `client.mmaV3Scores` · Source: `src/resources/mma-v3-scores.ts` · 6 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Fighter`
-- **Error**: `MmaV3Scores.MmaV3ScoresFighterProfileByFighterError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Scores.MmaV3ScoresFighterProfileByFighterError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Scores.MmaV3ScoresFighterProfileByFighterRequest` (2):
@@ -59,7 +59,7 @@ Accessor: `client.mmaV3Scores` · Source: `src/resources/mma-v3-scores.ts` · 6 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Fighter[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Scores.MmaV3ScoresFighterProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Scores.MmaV3ScoresFighterProfilesAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Scores.MmaV3ScoresFighterProfilesAllRequest` (1):
@@ -81,7 +81,7 @@ Accessor: `client.mmaV3Scores` · Source: `src/resources/mma-v3-scores.ts` · 6 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `FighterBasic[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Scores.MmaV3ScoresFighterProfilesBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Scores.MmaV3ScoresFighterProfilesBasicAllError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Scores.MmaV3ScoresFighterProfilesBasicAllRequest` (1):
@@ -103,7 +103,7 @@ Accessor: `client.mmaV3Scores` · Source: `src/resources/mma-v3-scores.ts` · 6 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `League[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Scores.MmaV3ScoresLeaguesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Scores.MmaV3ScoresLeaguesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Scores.MmaV3ScoresLeaguesRequest` (1):
@@ -125,7 +125,7 @@ Accessor: `client.mmaV3Scores` · Source: `src/resources/mma-v3-scores.ts` · 6 
 - **Auth**: any of `apiKeyHeader`, `apiKeyQuery` — the first one configured is sent
 - **Request body**: none — no `Content-Type` header is sent
 - **Returns**: `Event[]` — a bare `application/json` array; the success type *is* the array, not a wrapper model
-- **Error**: `MmaV3Scores.MmaV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
+- **Error**: `SportsDataIoError` with `kind: "api"`, an instance of `MmaV3Scores.MmaV3ScoresSchedulesError` — **typed arms**, narrowed on `err.payload.kind`
 - **Error arms**: `"unauthorized"` [401] `Unauthorized` · `"undeclared"` [any other] `rawBody: ArrayBuffer`
 
 **Fields** — `MmaV3Scores.MmaV3ScoresSchedulesRequest` (3):

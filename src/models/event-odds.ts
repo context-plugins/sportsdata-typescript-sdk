@@ -4,7 +4,12 @@ import { event1Schema, type Event1 } from "./event1.js";
 import { fightOddsSchema, type FightOdds } from "./fight-odds.js";
 
 export type EventOdds = {
+  /**
+   * The Event as an object - including the EventID, LeagueID, Name (and ShortName)of the Event,
+   * Season, Day, DateTime, & Status
+   */
   event?: Event1;
+  /** The Event's collection of FightOdds */
   fightOdds?: FightOdds[];
 };
 

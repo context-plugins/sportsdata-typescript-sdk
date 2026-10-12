@@ -4,7 +4,9 @@ import { playerTournamentSchema, type PlayerTournament } from "./player-tourname
 import { tournament11Schema, type Tournament11 } from "./tournament11.js";
 
 export type Leaderboard = {
+  /** The details of the tournament for this leaderboard */
   tournament?: Tournament11;
+  /** The details of the golfers who competed in this tournament */
   players?: PlayerTournament[];
 };
 

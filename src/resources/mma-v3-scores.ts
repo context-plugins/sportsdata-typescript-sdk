@@ -1,9 +1,9 @@
 import type { AuthSchemes } from "../auth-schemes.js";
+import { ApiError, type Declared, type ErrorDecoders, type ErrorPayload } from "../core/api-error.js";
 import type { ApiPromise } from "../core/api-promise.js";
 import type { RequestOptions } from "../core/api-request.js";
 import { anyAuth } from "../core/auth/schemes.js";
 import type { RawClient } from "../core/raw-client.js";
-import { ResponseError, type Declared, type ErrorDecoders } from "../core/response-error.js";
 import * as s from "../core/validation/index.js";
 import { eventDetailSchema, type EventDetail } from "../models/event-detail.js";
 import { eventSchema, type Event } from "../models/event.js";
@@ -25,6 +25,21 @@ export class MmaV3Scores {
     this.#auth = auth;
   }
 
+  /**
+   * Event
+   *
+   * @remarks
+   * Returns all fights that will take place within a given EventId (fight card.)
+   *
+   * @returns Success
+   *
+   * @throws {@link MmaV3Scores.MmaV3ScoresEventError} when the API answers with an error status —
+   * narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mmaV3ScoresEvent(
     request: MmaV3Scores.MmaV3ScoresEventRequest,
     options?: RequestOptions,
@@ -32,12 +47,14 @@ export class MmaV3Scores {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mma/scores/{format}/Event/{eventid}"),
+        urlTemplate: this.#servers.default("/v3/mma/scores/{format}/Event/{eventid}"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
           { name: "eventid", value: request.eventid, schema: s.string() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -48,6 +65,21 @@ export class MmaV3Scores {
     );
   }
 
+  /**
+   * Fighter Profile - By Fighter
+   *
+   * @remarks
+   * An individual fighter profile.
+   *
+   * @returns Success
+   *
+   * @throws {@link MmaV3Scores.MmaV3ScoresFighterProfileByFighterError} when the API answers with
+   * an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mmaV3ScoresFighterProfileByFighter(
     request: MmaV3Scores.MmaV3ScoresFighterProfileByFighterRequest,
     options?: RequestOptions,
@@ -55,12 +87,14 @@ export class MmaV3Scores {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mma/scores/{format}/Fighter/{fighterid}"),
+        urlTemplate: this.#servers.default("/v3/mma/scores/{format}/Fighter/{fighterid}"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
           { name: "fighterid", value: request.fighterid, schema: s.string() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -71,6 +105,21 @@ export class MmaV3Scores {
     );
   }
 
+  /**
+   * Fighter Profiles - All
+   *
+   * @remarks
+   * A list of all fighters with their basic biographical information and career records.
+   *
+   * @returns Success
+   *
+   * @throws {@link MmaV3Scores.MmaV3ScoresFighterProfilesAllError} when the API answers with an
+   * error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mmaV3ScoresFighterProfilesAll(
     request: MmaV3Scores.MmaV3ScoresFighterProfilesAllRequest,
     options?: RequestOptions,
@@ -78,11 +127,13 @@ export class MmaV3Scores {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mma/scores/{format}/Fighters"),
+        urlTemplate: this.#servers.default("/v3/mma/scores/{format}/Fighters"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -93,6 +144,22 @@ export class MmaV3Scores {
     );
   }
 
+  /**
+   * Fighter Profiles (Basic) - All
+   *
+   * @remarks
+   * A stripped-down list of all fighters with basic profile information, ideal for simple
+   * applications.
+   *
+   * @returns Success
+   *
+   * @throws {@link MmaV3Scores.MmaV3ScoresFighterProfilesBasicAllError} when the API answers with
+   * an error status — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mmaV3ScoresFighterProfilesBasicAll(
     request: MmaV3Scores.MmaV3ScoresFighterProfilesBasicAllRequest,
     options?: RequestOptions,
@@ -100,11 +167,13 @@ export class MmaV3Scores {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mma/scores/{format}/FightersBasic"),
+        urlTemplate: this.#servers.default("/v3/mma/scores/{format}/FightersBasic"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -115,6 +184,21 @@ export class MmaV3Scores {
     );
   }
 
+  /**
+   * Leagues
+   *
+   * @remarks
+   * A list of all leagues (currently this returns just UFC.)
+   *
+   * @returns Success
+   *
+   * @throws {@link MmaV3Scores.MmaV3ScoresLeaguesError} when the API answers with an error status —
+   * narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mmaV3ScoresLeagues(
     request: MmaV3Scores.MmaV3ScoresLeaguesRequest,
     options?: RequestOptions,
@@ -122,11 +206,13 @@ export class MmaV3Scores {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mma/scores/{format}/Leagues"),
+        urlTemplate: this.#servers.default("/v3/mma/scores/{format}/Leagues"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -137,6 +223,21 @@ export class MmaV3Scores {
     );
   }
 
+  /**
+   * Schedules
+   *
+   * @remarks
+   * A list of all upcoming Events, from which the Fights can be discovered.
+   *
+   * @returns Success
+   *
+   * @throws {@link MmaV3Scores.MmaV3ScoresSchedulesError} when the API answers with an error status
+   * — narrow on `err.payload.kind`
+   *
+   * @throws {@link SportsDataIoError} when no usable response was produced: a connection failure, a
+   * timeout, a body that would not decode, a value that would not encode, or a credential that
+   * could not be obtained
+   */
   mmaV3ScoresSchedules(
     request: MmaV3Scores.MmaV3ScoresSchedulesRequest,
     options?: RequestOptions,
@@ -144,13 +245,15 @@ export class MmaV3Scores {
     return this.#rawClient.execute(
       {
         method: "GET",
-        url: this.#servers.default("/v3/mma/scores/{format}/Schedule/{league}/{season}"),
+        urlTemplate: this.#servers.default("/v3/mma/scores/{format}/Schedule/{league}/{season}"),
         auth: anyAuth(this.#auth.apiKeyHeader, this.#auth.apiKeyQuery),
         pathParams: [
           { name: "format", value: request.format, schema: s.defaulted(formatSchema, Format.Json) },
           { name: "league", value: request.league, schema: s.string() },
           { name: "season", value: request.season, schema: s.string() },
         ],
+        query: [],
+        headers: [],
         body: { kind: "empty" },
       },
       {
@@ -164,70 +267,113 @@ export class MmaV3Scores {
 
 export namespace MmaV3Scores {
   export type MmaV3ScoresEventRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /** The unique ID of this event. <br> Examples: <code>51</code>, <code>52</code>, etc. */
     eventid: string;
   };
 
-  export class MmaV3ScoresEventError extends ResponseError<Declared<"unauthorized", Unauthorized>> {
+  export class MmaV3ScoresEventError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MmaV3ScoresEventError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MmaV3ScoresFighterProfileByFighterRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /**
+     * Each fighter has a unique ID assigned by FantasyData. Fighter IDs can be determined by
+     * pulling player related data. Example: <code>140000098</code>
+     */
     fighterid: string;
   };
 
-  export class MmaV3ScoresFighterProfileByFighterError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MmaV3ScoresFighterProfileByFighterError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MmaV3ScoresFighterProfileByFighterError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MmaV3ScoresFighterProfilesAllRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
   };
 
-  export class MmaV3ScoresFighterProfilesAllError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MmaV3ScoresFighterProfilesAllError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MmaV3ScoresFighterProfilesAllError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MmaV3ScoresFighterProfilesBasicAllRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
   };
 
-  export class MmaV3ScoresFighterProfilesBasicAllError extends ResponseError<
-    Declared<"unauthorized", Unauthorized>
-  > {
+  export class MmaV3ScoresFighterProfilesBasicAllError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MmaV3ScoresFighterProfilesBasicAllError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MmaV3ScoresLeaguesRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
   };
 
-  export class MmaV3ScoresLeaguesError extends ResponseError<Declared<"unauthorized", Unauthorized>> {
+  export class MmaV3ScoresLeaguesError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MmaV3ScoresLeaguesError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
   }
 
   export type MmaV3ScoresSchedulesRequest = {
+    /**
+     * Desired response format. Valid entries are <code>JSON</code> or <code>XML</code>.
+     *
+     * @default Format.Json
+     */
     format?: Format;
+    /** The name of the league.<br>Examples: <code>UFC</code>, etc */
     league: string;
+    /** Year of the season.<br>Examples: <code>2019</code>, <code>2020</code>, etc. */
     season: string;
   };
 
-  export class MmaV3ScoresSchedulesError extends ResponseError<Declared<"unauthorized", Unauthorized>> {
+  export class MmaV3ScoresSchedulesError extends ApiError {
+    declare readonly payload: ErrorPayload<Declared<"unauthorized", Unauthorized>>;
+
     static readonly errors: ErrorDecoders<MmaV3ScoresSchedulesError> = [
       { on: 401, kind: "unauthorized", decode: { kind: "json", schema: unauthorizedSchema } },
     ];
